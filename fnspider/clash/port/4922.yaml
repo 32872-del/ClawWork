@@ -1,0 +1,13 @@
+mixed-port: 4922
+    
+proxies:
+    - { name: 🇳🇱荷兰-BT下载-0.1倍率, type: vless, server: 204.10.194.86, port: 443, uuid: ccc86dc4-4ae2-4b1b-93fa-f1ce205f18d1, udp: true, flow: xtls-rprx-vision, tls: true, skip-cert-verify: false, client-fingerprint: safari, servername: iosapps.itunes.apple.com, reality-opts: { public-key: 9xhRQRC70QdPgNlgB1rLvT382AiRlFi_cEkCAK2BcjI, short-id: b5e2e30a } }
+
+proxy-groups:
+  - name: Proxy
+    type: select
+    proxies:
+      - 🇳🇱荷兰-BT下载-0.1倍率
+
+rules:
+  - MATCH,Proxy

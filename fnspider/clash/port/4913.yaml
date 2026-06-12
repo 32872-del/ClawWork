@@ -1,0 +1,13 @@
+mixed-port: 4913
+    
+proxies:
+    - { name: 🇯🇵日本-移动专属1号-0.1倍率, type: vless, server: 3bd9.55dca.e048.f1-fef1f.yfjcs.com, port: 443, uuid: ccc86dc4-4ae2-4b1b-93fa-f1ce205f18d1, udp: true, flow: xtls-rprx-vision, tls: true, skip-cert-verify: false, client-fingerprint: chrome, servername: osxapps.itunes.apple.com, reality-opts: { public-key: egq3FRi4oqkJ-iJ40r-pk10g7tawGg6o9c4UDGOPDU4, short-id: 9824e11ad3a632f8 } }
+
+proxy-groups:
+  - name: Proxy
+    type: select
+    proxies:
+      - 🇯🇵日本-移动专属1号-0.1倍率
+
+rules:
+  - MATCH,Proxy

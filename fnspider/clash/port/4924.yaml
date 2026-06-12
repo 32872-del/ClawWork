@@ -1,0 +1,13 @@
+mixed-port: 4924
+    
+proxies:
+    - { name: 🇹🇼台湾, type: vless, server: 3bd9.55dba.e048.f65-fef1f.yfjcs.com, port: 443, uuid: ccc86dc4-4ae2-4b1b-93fa-f1ce205f18d1, udp: true, flow: xtls-rprx-vision, tls: true, skip-cert-verify: false, client-fingerprint: ios, servername: cdn-dynmedia-1.microsoft.com, reality-opts: { public-key: N6xp9sw9ALhLxOtVRt_8PNI2e2q1vf0Ay6MaoP3l6Hw, short-id: be823fa3 } }
+
+proxy-groups:
+  - name: Proxy
+    type: select
+    proxies:
+      - 🇹🇼台湾
+
+rules:
+  - MATCH,Proxy

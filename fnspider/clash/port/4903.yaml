@@ -1,0 +1,13 @@
+mixed-port: 4903
+    
+proxies:
+    - { name: 🇸🇬新加坡专线4, server: 168.138.184.187, port: 20000, ports: 20000-55000, mport: 20000-55000, udp: true, skip-cert-verify: true, sni: www.bing.com, type: hysteria2, password: ccc86dc4-4ae2-4b1b-93fa-f1ce205f18d1 }
+
+proxy-groups:
+  - name: Proxy
+    type: select
+    proxies:
+      - 🇸🇬新加坡专线4
+
+rules:
+  - MATCH,Proxy

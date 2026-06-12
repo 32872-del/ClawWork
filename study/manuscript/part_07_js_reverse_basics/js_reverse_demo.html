@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Reverse Demo</title>
+</head>
+<body>
+  <input id="keyword" value="shoes">
+  <button id="search">搜索</button>
+  <pre id="output"></pre>
+
+  <script>
+    const appId = "demo-app";
+    const salt = "demo-salt";
+
+    function simpleHash(text) {
+      let hash = 0;
+      for (let i = 0; i < text.length; i++) {
+        hash = (hash * 31 + text.charCodeAt(i)) >>> 0;
+      }
+      return hash.toString(16);
+    }
+
+    function buildParams(keyword) {
+      return {
+        keyword: keyword,
+        page: 1,
+        size: 20,
+        timestamp: Date.now()
+      };
+    }
+
+    function createSign(params) {
+      const raw = Object.keys(params)
+        .sort()
+        .map(key => key + "=" + params[key])
+        .join("&");
+
+      return {
+        raw: raw,
+        sign: simpleHash(raw + salt)
+      };
+    }
+
+    function search(keyword) {
+      const params = buildParams(keyword);
+      const signInfo = createSign(params);
+      const headers = {
+        "x-app-id": appId,
+        "x-sign": signInfo.sign
+      };
+
+      const result = {
+        url: "/api/search",
+        method: "POST",
+        params: params,
+        headers: headers,
+        raw: signInfo.raw
+      };
+
+      document.querySelector("#output").textContent = JSON.stringify(result, null, 2);
+
+      fetch("https://httpbin.org/post", {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+          "x-app-id": appId,
+          "x-sign": signInfo.sign
+        },
+        body: JSON.stringify(params)
+      });
+    }
+
+    document.querySelector("#search").addEventListener("click", function() {
+      const keyword = document.querySelector("#keyword").value;
+      search(keyword);
+    });
+  </script>
+</body>
+</html>

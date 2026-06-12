@@ -1,0 +1,13 @@
+mixed-port: 4921
+    
+proxies:
+    - { name: 🇯🇵日本-6号-0.1倍率, type: vless, server: 3bd9.55dca.e048.f7-fef1f.yfjcs.com, port: 443, uuid: ccc86dc4-4ae2-4b1b-93fa-f1ce205f18d1, udp: true, flow: xtls-rprx-vision, tls: true, skip-cert-verify: false, client-fingerprint: ios, servername: updates.cdn-apple.com, reality-opts: { public-key: SMnrjqT7vDwVYRL05E6qgSFkNpEyLpyZtWMHvhHr9BM, short-id: ab2909fe } }
+
+proxy-groups:
+  - name: Proxy
+    type: select
+    proxies:
+      - 🇯🇵日本-6号-0.1倍率
+
+rules:
+  - MATCH,Proxy

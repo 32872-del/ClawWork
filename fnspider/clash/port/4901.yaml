@@ -1,0 +1,13 @@
+mixed-port: 4901
+    
+proxies:
+    - { name: 🇸🇬新加坡专线2, server: 203.27.106.139, port: 50000, ports: 50000-55000, mport: 50000-55000, udp: true, skip-cert-verify: true, sni: www.bing.com, type: hysteria2, password: ccc86dc4-4ae2-4b1b-93fa-f1ce205f18d1 }
+
+proxy-groups:
+  - name: Proxy
+    type: select
+    proxies:
+      - 🇸🇬新加坡专线2
+
+rules:
+  - MATCH,Proxy

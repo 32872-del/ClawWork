@@ -1,0 +1,13 @@
+mixed-port: 4936
+    
+proxies:
+    - { name: 🇯🇵日本, type: vless, server: cf.yfjc.sbs, port: 443, uuid: ccc86dc4-4ae2-4b1b-93fa-f1ce205f18d1, udp: true, tls: true, skip-cert-verify: false, client-fingerprint: ios, servername: yfjc-jp1.wangpan.shop, network: ws, ws-opts: { path: /yfjc/jp1, headers: { Host: yfjc-jp1.wangpan.shop } } }
+
+proxy-groups:
+  - name: Proxy
+    type: select
+    proxies:
+      - 🇯🇵日本
+
+rules:
+  - MATCH,Proxy

@@ -1,0 +1,13 @@
+mixed-port: 4923
+    
+proxies:
+    - { name: 🇳🇱荷兰2-BT下载-0.1倍率, type: vless, server: cf.yfjc.sbs, port: 443, uuid: ccc86dc4-4ae2-4b1b-93fa-f1ce205f18d1, udp: true, tls: true, skip-cert-verify: false, client-fingerprint: ios, servername: yf-nl1.wangpan.shop, network: ws, ws-opts: { path: /yfjc/nl1, headers: { Host: yf-nl1.wangpan.shop } } }
+
+proxy-groups:
+  - name: Proxy
+    type: select
+    proxies:
+      - 🇳🇱荷兰2-BT下载-0.1倍率
+
+rules:
+  - MATCH,Proxy

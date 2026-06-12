@@ -1,0 +1,21 @@
+mixed-port: 7890
+allow-lan: false
+mode: rule
+log-level: info
+
+proxies:
+  - name: example-proxy
+    type: http
+    server: proxy.example.com
+    port: 2000
+    username: username
+    password: password
+
+proxy-groups:
+  - name: Proxy
+    type: select
+    proxies:
+      - example-proxy
+
+rules:
+  - MATCH,Proxy

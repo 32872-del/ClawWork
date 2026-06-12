@@ -1,0 +1,13 @@
+mixed-port: 4931
+    
+proxies:
+    - { name: 🇭🇰香港-移动专属2号, type: vless, server: 43.245.223.56, port: 443, uuid: ccc86dc4-4ae2-4b1b-93fa-f1ce205f18d1, udp: true, flow: xtls-rprx-vision, tls: true, skip-cert-verify: false, client-fingerprint: chrome, servername: iosapps.itunes.apple.com, reality-opts: { public-key: 9G1Wl-72Sn9N5kjgUm4LGPkG1f6EjJUxbpGqIxUChXo, short-id: c07250e9 } }
+
+proxy-groups:
+  - name: Proxy
+    type: select
+    proxies:
+      - 🇭🇰香港-移动专属2号
+
+rules:
+  - MATCH,Proxy

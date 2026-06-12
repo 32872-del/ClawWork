@@ -1,0 +1,13 @@
+mixed-port: 4932
+    
+proxies:
+    - { name: 🇭🇰香港-移动专属3号, type: vless, server: 43.245.223.80, port: 443, uuid: ccc86dc4-4ae2-4b1b-93fa-f1ce205f18d1, udp: true, flow: xtls-rprx-vision, tls: true, skip-cert-verify: false, client-fingerprint: safari, servername: osxapps.itunes.apple.com, reality-opts: { public-key: ohHYewuCouiKzI-fFvhKzYY62m_oDtElS23sosvA6Wc, short-id: fbb5600c } }
+
+proxy-groups:
+  - name: Proxy
+    type: select
+    proxies:
+      - 🇭🇰香港-移动专属3号
+
+rules:
+  - MATCH,Proxy

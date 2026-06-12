@@ -1,0 +1,13 @@
+mixed-port: 4927
+    
+proxies:
+    - { name: 🇳🇱荷兰阿姆斯特丹, type: vless, server: 158.101.195.118, port: 443, uuid: ccc86dc4-4ae2-4b1b-93fa-f1ce205f18d1, udp: true, flow: xtls-rprx-vision, tls: true, skip-cert-verify: false, client-fingerprint: ios, servername: tv.apple.com, reality-opts: { public-key: BU86Bh8IfiMcQllCNU2sFi4z1GfpPOaTxCepPpNmgC4, short-id: 710e95ee } }
+
+proxy-groups:
+  - name: Proxy
+    type: select
+    proxies:
+      - 🇳🇱荷兰阿姆斯特丹
+
+rules:
+  - MATCH,Proxy

@@ -1,0 +1,13 @@
+mixed-port: 4928
+    
+proxies:
+    - { name: 🇺🇸美国圣何塞, type: vless, server: 192.9.142.185, port: 443, uuid: ccc86dc4-4ae2-4b1b-93fa-f1ce205f18d1, udp: true, flow: xtls-rprx-vision, tls: true, skip-cert-verify: false, client-fingerprint: chrome, servername: www.mi.com, reality-opts: { public-key: 1utdJ0YWFpPYbH-bfIkfGgSebhByfttArVtO9iSlwFM, short-id: '30194285' } }
+
+proxy-groups:
+  - name: Proxy
+    type: select
+    proxies:
+      - 🇺🇸美国圣何塞
+
+rules:
+  - MATCH,Proxy

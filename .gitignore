@@ -1,0 +1,57 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Editors and local OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Local virtual environments and packaged runtimes
+.venv/
+venv/
+env/
+runtime_env/
+
+# Runtime crawler data
+goods/
+goods_cache/
+downloadimg/
+browser_profiles/
+logs/
+error_logs/
+out/
+output/
+upload/
+
+# Generated data and exports
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
+*.xlsx
+*.xls
+*.csv
+!tools/products_import_template.xlsx
+*.zip
+*.bak
+
+# Local secrets and auth state
+.env
+.env.*
+!.env.example
+cookies.json
+auth_state/
+storage_state*.json
+
+# Clash/proxy pool is part of this private runtime repository.
+!fnspider/clash/
+!fnspider/clash/port/
+!fnspider/clash/port/*.yaml
+!fnspider/clash/*.exe

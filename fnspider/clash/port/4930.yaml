@@ -1,0 +1,13 @@
+mixed-port: 4930
+    
+proxies:
+    - { name: 🇭🇰香港-移动专属1号, type: vless, server: 43.245.223.34, port: 443, uuid: ccc86dc4-4ae2-4b1b-93fa-f1ce205f18d1, udp: true, flow: xtls-rprx-vision, tls: true, skip-cert-verify: false, client-fingerprint: ios, servername: cdn-dynmedia-1.microsoft.com, reality-opts: { public-key: BiwY7Que5N4TjVfseuMWWC2AO1U8G196O1fEFocOK0w, short-id: 8004932d } }
+
+proxy-groups:
+  - name: Proxy
+    type: select
+    proxies:
+      - 🇭🇰香港-移动专属1号
+
+rules:
+  - MATCH,Proxy

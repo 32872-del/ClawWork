@@ -1,0 +1,13 @@
+mixed-port: 4935
+    
+proxies:
+    - { name: 🇩🇪德国法兰克福, type: vless, server: 141.147.33.180, port: 443, uuid: ccc86dc4-4ae2-4b1b-93fa-f1ce205f18d1, udp: true, flow: xtls-rprx-vision, tls: true, skip-cert-verify: false, client-fingerprint: safari, servername: music.apple.com, reality-opts: { public-key: CxZKPoPJmBg2SSXYFRoasAPw-f_ESjRxr1fySPgrG3g, short-id: e3a0f28a } }
+
+proxy-groups:
+  - name: Proxy
+    type: select
+    proxies:
+      - 🇩🇪德国法兰克福
+
+rules:
+  - MATCH,Proxy

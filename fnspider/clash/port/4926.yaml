@@ -1,0 +1,13 @@
+mixed-port: 4926
+    
+proxies:
+    - { name: 🇫🇷法国马赛, type: vless, server: 144.24.206.147, port: 443, uuid: ccc86dc4-4ae2-4b1b-93fa-f1ce205f18d1, udp: true, flow: xtls-rprx-vision, tls: true, skip-cert-verify: false, client-fingerprint: safari, servername: tv.apple.com, reality-opts: { public-key: cu2H4WP9LU3ZdD85MNr8w4jUS79Wx6YVUxVeRGVBQyc, short-id: be05a235 } }
+
+proxy-groups:
+  - name: Proxy
+    type: select
+    proxies:
+      - 🇫🇷法国马赛
+
+rules:
+  - MATCH,Proxy

@@ -1,0 +1,13 @@
+mixed-port: 4947
+    
+proxies:
+    - { name: 🇸🇬新加坡三网专线1号, type: vless, server: cf.yfjc.sbs, port: 443, uuid: ccc86dc4-4ae2-4b1b-93fa-f1ce205f18d1, udp: true, tls: true, skip-cert-verify: false, client-fingerprint: chrome, servername: yfjc-sg1.wangpan.shop, network: ws, ws-opts: { path: /yfjc/sg, headers: { Host: yfjc-sg1.wangpan.shop } } }
+
+proxy-groups:
+  - name: Proxy
+    type: select
+    proxies:
+      - 🇸🇬新加坡三网专线1号
+
+rules:
+  - MATCH,Proxy

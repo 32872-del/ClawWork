@@ -1,0 +1,774 @@
+import ast
+import base64
+import os
+from lxml import html
+import pandas as pd
+from tqdm import tqdm
+from itertools import product
+from hashlib import md5
+import traceback
+from copy import deepcopy
+import string
+from datetime import datetime as dt
+from lxml import html
+import requests, json
+import sqlite3
+from math import ceil
+import re
+import copy
+from pathlib import Path
+from urllib.parse import unquote, urlparse
+import sqlite3
+import sys
+
+TOOL_DIR = Path(__file__).resolve().parent
+BASE_DIR = TOOL_DIR.parent
+
+
+def resolve_db_path(raw_name=None):
+    raw_name = raw_name or os.environ.get("MERGE_DB_NAME") or "1781236934_66_sephora.db"
+    raw_path = Path(raw_name)
+    db_name = raw_path.name
+    if ".db" not in db_name:
+        db_name += ".db"
+
+    if raw_path.exists():
+        return raw_path.resolve(), db_name
+
+    if not raw_path.is_absolute() and raw_path.parent != Path("."):
+        candidate = (BASE_DIR / raw_path).resolve()
+        if candidate.exists():
+            return candidate, db_name
+
+    source = os.environ.get("MERGE_SOURCE", "out").lower()
+    roots = [BASE_DIR / "goods", BASE_DIR / "out"] if source != "out" else [BASE_DIR / "out", BASE_DIR / "goods"]
+    for root in roots:
+        candidate = root / db_name
+        if candidate.exists():
+            return candidate.resolve(), db_name
+
+    return (BASE_DIR / source / db_name).resolve(), db_name
+
+
+db_path, name = resolve_db_path(sys.argv[1] if len(sys.argv) > 1 else None)
+print(f"读取数据库: {db_path}")
+
+
+# conn = sqlite3.connect(db_path)
+
+
+# new_df = pd.read_sql("SELECT * FROM goods", conn, chunksize=5000)
+# new_df = pd.concat(new_df, ignore_index=True)
+
+def load_data(_db_path):
+    '''
+    读取db文件
+    '''
+    _conn = sqlite3.connect(_db_path)
+
+    _df = pd.read_sql(f"SELECT * FROM goods", _conn)
+
+    _conn.close()
+    if 'sign' not in _df.columns:
+        _df = _df.assign(sign='')
+
+    if 'tags' not in _df.columns:
+        _df = _df.assign(tags='')
+
+    #
+    # _df['option1_name'] = 'modelos'
+    # _df['option2_value'] = _df['option2_value'].apply(
+    #     lambda x: json.dumps([str(x)], ensure_ascii=False) if pd.notna(x) else x
+    # )
+    print(f"读取完成：{len(_df)} 行")
+    return _df
+def normalize_value(x):
+    # 1️⃣ list 直接返回
+    if isinstance(x, list):
+        return x
+
+    # 2️⃣ 空值
+    if x is None or x == '' or pd.isna(x):
+        return ''
+
+    # 3️⃣ 字符串处理
+    if isinstance(x, str):
+        x = x.strip()
+
+        # 尝试解析 ["a","b"] / ['a','b']
+        try:
+            v = ast.literal_eval(x)
+            if isinstance(v, list):
+                return v
+        except:
+            pass
+
+        # 👉 单字符串保持原样
+        return x
+
+    return x
+
+def normalize_image_key(url):
+    path = urlparse(str(url or "")).path.lower()
+    if "chaussea" in name.lower():
+        return path
+    filename = path.rsplit('/', 1)[-1]
+    filename = re.sub(r'^pol_p[lsmi]_', '', filename)
+    return filename
+
+def normalize_image_list(images):
+    if not isinstance(images, list):
+        images = normalize_value(images)
+    if not isinstance(images, list):
+        images = [images] if images else []
+
+    preferred = []
+    fallback = []
+    other = []
+    for image in images:
+        url = str(image or '').strip()
+        if not url:
+            continue
+        low = url.lower()
+        if '/pol_pl_' in low or '/pol_il_' in low:
+            preferred.append(url)
+        elif '/pol_ps_' in low or '/pol_pm_' in low:
+            fallback.append(url)
+        else:
+            other.append(url)
+
+    source = preferred + other if preferred else fallback + other
+    result = []
+    seen = set()
+    for url in source:
+        key = normalize_image_key(url)
+        if key in seen:
+            continue
+        seen.add(key)
+        result.append(url)
+    return result
+
+def parse_price(value):
+    if value is None or value == '' or pd.isna(value):
+        return 0.0
+    if isinstance(value, (int, float)):
+        return float(value)
+    text = str(value).strip()
+    text = re.sub(r"[^\d,.\-]", "", text)
+    if "," in text and "." in text:
+        if text.rfind(",") > text.rfind("."):
+            text = text.replace(".", "").replace(",", ".")
+        else:
+            text = text.replace(",", "")
+    elif "," in text:
+        text = text.replace(",", ".")
+    return float(text)
+
+def format_import_price(value):
+    if value is None or value == '' or pd.isna(value):
+        return ''
+    if '_54_karaca' in name and isinstance(value, str):
+        text = re.sub(r"[^\d,.\-]", "", value.strip())
+        if re.fullmatch(r"\d{1,3}(?:\.\d{3})+(?:,\d+)?", text):
+            text = text.replace(".", "").replace(",", ".")
+            price = float(text)
+        else:
+            price = parse_price(value)
+    else:
+        price = parse_price(value)
+    return format(price, '.2f')
+
+def site_name_from_db(db_name):
+    stem = str(db_name or "").replace(".db", "")
+    parts = stem.split("_")
+    if len(parts) >= 3 and parts[0].isdigit() and parts[1].isdigit():
+        return "_".join(parts[2:])
+    if len(parts) >= 2 and parts[0].isdigit():
+        return "_".join(parts[1:])
+    return stem
+
+def preprocess(_df):
+    '''
+    数据清洗
+    '''
+    # print(f"原始数据：{len(_df)} 行")
+
+    df = _df.copy()
+    # 去掉关键字段为空的数据
+    df = df.dropna(subset=['price', 'image_src'], how='any')
+    # 删除整行空数据
+    df = df.dropna(how='all')
+    # 所有NaN变空字符串
+    df = df.fillna('')
+
+    list_cols = ["image_src", "option3_value", "option2_value", "size_price"]
+    for col in list_cols:
+        if col in df.columns:
+            df[col] = df[col].apply(parse_list)
+    if 'image_src' in df.columns:
+        df['image_src'] = df['image_src'].apply(normalize_image_list)
+
+    df['option1_value'] = df['option1_value'].apply(normalize_value)
+
+    if '_35_reserved' in name or '_44_kidsinspirations' in name:
+        df['option2_name'] = ''
+        df['option2_value'] = [[] for _ in range(len(df))]
+        df['option3_name'] = ''
+        df['option3_value'] = [[] for _ in range(len(df))]
+        df['size_price'] = [[] for _ in range(len(df))]
+    # 修改sole_id
+    df['model'] = df['handle'].astype(str).str.split('_').str[0]
+    min_sole = df.groupby('model')['sole_id'].transform('min')
+    df['sole_id'] = min_sole
+    # 修改handle
+    df['handle'] = df['handle'].astype(str).apply(lambda x: x.split('_')[0])
+
+    df['body'] = df.apply(
+        lambda row: clean_body(row['body'], row['url'], row['handle']),
+        axis=1
+    )
+    _df = _df[_df['body'].fillna('').str.len() <= 32700]
+    # 第一张图片
+    df['first_images'] = df['image_src'].apply(get_first_image)
+
+    # 专辑目录
+    df['categories'] = df.apply(
+        lambda x: build_categories(
+            x.get('categories_1', ''),
+            x.get('categories_2', ''),
+            x.get('categories_3', '')
+        ),
+        axis=1
+    )
+    df['_temp_image_src'] = df['image_src'].astype(str)
+    # 去重产品
+    df = clean_duplicate_products(df)
+
+
+
+
+
+
+
+    df = df.drop(columns=['model'])
+    return df
+
+def clean_duplicate_products(df):
+    df['product_handle'] = df['handle'].str.split('_').str[0]
+
+    df['sort_id'] = df['product_handle'].str.extract(r'(\d+)').astype(float)
+
+    df = df.sort_values('sort_id')
+
+    key_cols = ['handle', 'url', 'option1_name', 'option1_value', 'option2_name', 'option2_value', 'option3_name', 'option3_value']
+    existing_key_cols = [col for col in key_cols if col in df.columns]
+    if existing_key_cols:
+        dedup_key_cols = []
+        for col in existing_key_cols:
+            key_col = f'_dedup_{col}'
+            df[key_col] = df[col].apply(lambda value: json.dumps(value, ensure_ascii=False, sort_keys=True) if isinstance(value, (list, dict)) else str(value))
+            dedup_key_cols.append(key_col)
+        df['categories'] = df.groupby(dedup_key_cols, dropna=False)['categories'].transform(
+            lambda x: ','.join(x.dropna().astype(str).unique())
+        )
+        df = df.drop_duplicates(subset=dedup_key_cols, keep='first').copy()
+        df = df.drop(columns=dedup_key_cols)
+
+    df['_temp_title'] = df['title'].astype(str)
+    df['_temp_price'] = df['price'].astype(str)
+    df['_temp_image_src'] = df['image_src'].astype(str)
+
+    df['categories'] = df.groupby(['title', 'price', '_temp_image_src'])['categories'].transform(
+        lambda x: ','.join(x.dropna().astype(str).unique())
+    )
+    df['first_seen_handle'] = df.groupby(['_temp_title', '_temp_price', '_temp_image_src'])['product_handle'].transform('first')
+
+    to_delete_handles = df[df['product_handle'] != df['first_seen_handle']]['product_handle'].unique()
+
+    df_cleaned = df[~df['product_handle'].isin(to_delete_handles)].copy()
+
+    columns_to_drop = [
+        'product_handle', 'sort_id', 'first_seen_handle',
+        '_temp_title', '_temp_price', '_temp_image_src'
+    ]
+    df_cleaned = df_cleaned.drop(columns=columns_to_drop)
+
+    return df_cleaned
+
+def build_spu_list(df, off=0.1):
+    result = []
+
+    for handle, group in df.groupby("handle"):
+        # print(type(group["option1_value"].iloc[0]))
+        # print(len(group["option1_value"]))
+
+        all_img = []
+        group = group.reset_index(drop=True)
+        new_values = []
+        seen = {}
+        empty_counter = 0  # 👉 专门统计空值
+
+        for _, row_group in group.iterrows():
+            v = row_group["option1_value"]
+            name = row_group["option1_name"]
+            handle = row_group["handle"]
+
+            # list 直接跳过
+            if isinstance(v, list):
+                new_values.append(v)
+                continue
+
+            # 标准化
+            if isinstance(v, str):
+                v = v.strip()
+            else:
+                v = "" if v is None else str(v)
+
+            # 处理空值：有规格名，但规格值为空
+            if name and v == "":
+                empty_counter += 1
+                v = f"{handle}_{empty_counter}"
+
+            if v == "":
+                new_values.append(v)
+            elif v not in seen:
+                seen[v] = 0
+                new_values.append(v)
+            else:
+                seen[v] += 1
+                new_values.append(f"{v}{seen[v]}")
+
+        group = group.copy()
+        group["option1_value"] = new_values
+
+        for idx, row in group.iterrows():
+            for i in row['image_src']:
+                all_img.append(i)
+        all_img = normalize_image_list(all_img)
+        # print(all_img)
+        for idx, row in group.iterrows():
+            M_item = {
+                "goods_id": handle,  # 商品ID
+                # 基础字段（取第一个非空）
+                "title": group["title"].iloc[0],  # 商品标题*
+                "goods_class": "M",  # 商品属性*
+                "subtitle": row["subtitle"] if row["subtitle"] else "",  # 商品副标题
+                "body": row["body"],  # 商品描述
+                "categories": row["categories"] if row["categories"] else "",  # 专辑名称
+                "more_info": row["more_info"] if row["more_info"] else "",  # 简短描述
+                # option1（颜色）
+                "option1": row["option1_name"],  # 款式1
+                "option2": row["option2_name"],  # 款式2
+                "option3": row["option3_name"],  # 款式3
+
+                # 图片
+                "image_src": ",".join(all_img),
+
+                "M": "Y",  # 商品上架
+                "N": "N",  # 商品收税
+                "R": "1",  # 库存规则*
+
+            }
+            # 单一商品，没有变体
+            if len(group) == 1 and len(row['option2_value']) <= 1 and len(row['option3_value']) <= 1 and not row['size_price'] and (isinstance(row["option1_value"], str) or len(row["option1_value"]) <= 1):
+                # print(row["option1_value"],type(row["option1_value"]))
+                if isinstance(row["option1_value"], str):
+                    option1 = row["option1_value"]
+                else:option1 = row["option1_value"][0]
+                item = {
+                    "goods_id": handle,  # 商品ID
+                    # 基础字段（取第一个非空）
+                    "title": row["title"],  # 商品标题*
+                    "goods_class": "S",  # 商品属性*
+                    "subtitle": row["subtitle"] if row["subtitle"] else "",  # 商品副标题
+                    "body": row["body"],  # 商品描述
+                    "categories": row["categories"] if row["categories"] else "",  # 专辑名称
+                    "more_info": row["more_info"] if row["more_info"] else "",  # 简短描述
+                    # list字段
+                    "price": parse_price(row["price"]),
+
+                    # 图片
+                    "image_src": ",".join(row["image_src"]),
+                    "M": "Y",  # 商品上架
+                    "N": "N",  # 商品收税
+                    "R": "1",  # 库存规则*
+                    "AB": "1",  # 商品重量(kg)
+                    "AD": "9999",  # 商品库存
+                    "AF": row['url'],  # url
+                    "Y": parse_price(row["price"]) * off,
+
+                    # 标签
+                    "option1":option1,
+                    "option2":row["option2_value"] if row["option2_value"] else '',
+                    "option3":row["option3_value"] if row["option3_value"] else '',
+                }
+                result.append(item)
+            # 颜色不共用URL
+            elif not isinstance(row['option1_value'], list) or not row['option1_value']:
+                if not row['option1_value'] and row['option1_name']:
+                    row['option1_value'] = row['handle']
+
+                # print(row['option1_value'], row['option2_value'], row['option3_value'])
+                # print(type(row["image_src"]))
+                if idx == 0:
+                    result.append(M_item)
+                # 生成笛卡尔积
+                # print([row['option1_value']], row['option2_value'], row['option3_value'])
+                res = smart_product([row['option1_value']], row['option2_value'], row['option3_value'])
+                # print(res)
+                for i, (option1, option2, option3) in enumerate(res):
+                    # print(option1,option2,option3)
+                    option1 = option1.strip()
+                    if row['size_price']:
+                        n = row['option2_value'].index(option2)
+                        price = row['size_price'][n]
+                    else:
+                        price = row["price"]
+                    item = {
+                        "title": M_item["title"],  # 商品标题*
+                        "goods_class": "P",  # 商品属性*
+                        "price": parse_price(price),
+                        # option1（颜色）
+                        "option1": M_item['goods_id']+'_'+str(idx+1) if not row['option1_value'] and row['option1_name'] else option1,  # 款式1
+                        "option2": M_item['goods_id']+'_'+str(idx+1) if not row['option2_value'] and row['option2_name']  else option2,  # 款式2
+                        "option3": M_item['goods_id']+'_'+str(idx+1) if not row['option3_value'] and row['option3_name'] else option3,  # 款式3
+                        "image_src": row["image_src"][0],
+                        "AB": "1",  # 商品重量(kg)
+                        "AD": "9999",  # 商品库存
+                        "AF": row['url'],  # url
+                        "Y": parse_price(price) * off,
+                    }
+                    result.append(item)
+                    # print(item)
+
+            # 颜色共用URL
+            else:
+                if idx == 0:
+                    result.append(M_item)
+                res = smart_product(row['option1_value'], row['option2_value'], row['option3_value'])
+                # print(res)
+                for i, (option1, option2, option3) in enumerate(res):
+                    option1 = option1.strip()
+                    # print(option1, option2, option3)
+                    if row['size_price']:
+                        n = row['option2_value'].index(option2)
+                        # print(n,option2)
+                        price = row['size_price'][n]
+                    else:
+                        price = row["price"]
+                    item = {
+                        "title": M_item["title"],  # 商品标题*
+                        "goods_class": "P",  # 商品属性*
+                        "price": parse_price(price),
+                        # option1（颜色）
+                        "option1": M_item['goods_id']+'_'+str(idx+1) if not row['option1_value'] and row['option1_name'] else option1,  # 款式1
+                        "option2": M_item['goods_id']+'_'+str(idx+1) if not row['option2_value'] and row['option2_name']  else option2,  # 款式2
+                        "option3": M_item['goods_id']+'_'+str(idx+1) if not row['option3_value'] and row['option3_name'] else option3,  # 款式3
+                        "image_src": row["image_src"][0],
+                        "AB": "1",  # 商品重量(kg)
+                        "AD": "9999",  # 商品库存
+                        "AF": row['url'],  # url
+                        "Y": parse_price(price) * off,
+                    }
+                    # print(item)
+                    result.append(item)
+
+        # result.append(item)
+    # for i in result:
+        # print(i)
+    return result
+
+
+def out_xlsx(df, out_path, batch_size=None):
+    batch_size = int(os.environ.get("MERGE_XLSX_BATCH_SIZE", batch_size or 1000000))
+    timestamp = dt.now().strftime('%Y-%m-%d %H-%M-%S')
+    template_df = pd.read_excel(TOOL_DIR / "products_import_template.xlsx", nrows=2)
+    n_name = name.replace('.db', '')
+    site_name = site_name_from_db(name)
+    try:
+        new_name = n_name.rsplit('_',1)[0]
+    except:
+        new_name = n_name
+    current_batch = []
+    batch_count = 1
+
+    pending_flush = False
+
+    total = 0
+
+    for item in df:
+        if item.get("goods_class") == "M" or item.get("goods_class") == "S":
+            total += 1
+    print(f'一共{total}个商品')
+
+
+
+
+
+
+    for row in df:
+
+        new_row = {col: '' for col in template_df.columns}  # 初始化空行
+
+        # 手动填
+        new_row['商品ID'] = row.get('goods_id', '')
+        new_row['商品标题*'] = row.get('title', '')
+        new_row['商品属性*'] = row.get('goods_class', '')
+        # new_row['商品类型'] = row.get('','')
+        new_row['商品副标题'] = row.get('subtitle', '')
+        new_row['商品描述'] = row.get('body', '')
+        new_row['简短描述'] = row.get('more_info', '')
+        new_row['商品上架'] = row.get('M', '')
+        new_row['商品收税'] = row.get('N', '')
+        new_row['库存规则*'] = row.get('R', '')
+        new_row['专辑名称'] = row.get('categories', '')
+        new_row['款式1'] = row.get('option1', '')
+        new_row['款式2'] = row.get('option2', '')
+        new_row['款式3'] = row.get('option3', '')
+        new_row['商品售价*'] = format_import_price(row.get('Y', ''))
+        new_row['商品原价'] = format_import_price(row.get('price', ''))
+        new_row['商品重量(kg)'] = row.get('AB', '')
+        new_row['商品库存'] = row.get('AD', '')
+        new_row['商品图片*'] = normalize_import_images(row.get('image_src', ''))
+        new_row['变体URL'] = row.get('AF', '')
+
+        if '_41_gymbeam' not in name:
+            options = [
+                new_row['款式1'],
+                new_row['款式2'],
+                new_row['款式3']
+            ]
+            # 过滤空值
+            options = [x for x in options if x]
+            # 补空回3位
+            options += [''] * (3 - len(options))
+            new_row['款式1'], new_row['款式2'], new_row['款式3'] = options
+        if pending_flush and new_row.get('商品ID', ''):
+            output_path = f'{out_path}/{site_name}_{timestamp}_{new_name}_{batch_count}.xlsx'
+            # for i, row in final_df.iterrows():
+            #     for col in final_df.columns:
+            #         val = row[col]
+            #         if isinstance(val, str) and len(val) > 32767:
+            #             print(f"超长数据 -> 行:{i} 列:{col} 长度:{len(val)} goods_id:{row.get('商品ID')}")
+            save_batch(template_df, current_batch, output_path)
+
+            current_batch = []
+            batch_count += 1
+            pending_flush = False
+        current_batch.append(new_row)
+
+        if len(current_batch) >= batch_size:
+            pending_flush = True
+
+
+    if current_batch:
+        output_path = f'{out_path}/{site_name}_{timestamp}_{new_name}_{batch_count}.xlsx'
+        save_batch(template_df, current_batch, output_path)
+
+    print("全部导出完成")
+
+def clean_body(body, url, handle=None, max_len=32767):
+    if body is None or str(body).strip() == '' or pd.isna(body):
+        return ''
+    body = re.sub(r'<!--.*?-->','',body,flags=re.DOTALL)
+    if isinstance(body, str) and len(body) > max_len:
+        print(f"⚠️ body过长: handle={handle}, 长度={len(body)}")
+
+    try:
+        doc = html.fromstring(body)
+    except Exception:
+        print(f"⚠️ HTML解析失败: handle={handle}")
+        return ''
+    # 删除img
+    for img in doc.xpath('//img'):
+        img.drop_tree()
+
+    # 🚨 1️⃣ 删除 script / style / link
+    for tag in ['script', 'style', 'link']:
+        for el in doc.xpath(f'//{tag}'):
+            el.getparent().remove(el)
+
+    # 🚨 2️⃣ 删除 data-* 属性
+    for el in doc.iter():
+        for attr in list(el.attrib):
+            if attr.startswith('data-'):
+                del el.attrib[attr]
+
+    # 🚨 3️⃣ li -> p
+    for li in doc.xpath('//li'):
+        li.tag = 'p'
+
+    # 🚨 4️⃣ 加 meta
+    import base64
+    encoded_url = base64.b64encode(url.encode('utf-8')).decode()
+
+    meta_el = html.Element("meta")
+    meta_el.set("property", "og:url:pro")
+    meta_el.set("content", encoded_url)
+
+    doc.append(meta_el)
+
+    result = html.tostring(doc, encoding='unicode', method='html')
+
+    # 🚨 5️⃣ 超长检测（处理后）
+    if len(result) > max_len:
+        print(f"⚠️ 处理后仍超长: handle={handle}, 长度={len(result)}")
+        result = result[:max_len]
+
+    return result
+
+
+
+
+def save_batch(template_df, batch_data, output_path):
+    df_data = pd.DataFrame(batch_data)
+
+    final_df = pd.concat([template_df, df_data], ignore_index=True)
+
+    final_df.to_excel(output_path, index=False)
+
+    print(f"已导出: {output_path} ({len(batch_data)} 行)")
+
+
+
+
+def build_categories(categories_1, categories_2, categories_3):
+    # ===== 对应 cover_cate =====
+    if (
+        isinstance(categories_2, str)
+        and isinstance(categories_3, str)
+        and categories_2
+        and categories_3.startswith(categories_2 + " > ")
+    ):
+        categories_3 = categories_3.split(" > ", 1)[1]
+
+    cate = [categories_1, categories_2, categories_3]
+
+    cate = [
+        string.capwords(c.replace(',', ' / '))
+        for c in cate
+        if isinstance(c, str) and c != ''
+    ]
+
+    if not cate:
+        return ''
+
+    for index in range(1, len(cate)):
+        cate[index] = cate[index - 1] + '>' + cate[index]
+
+    # ===== 对应 merge_cate（单行情况下）=====
+    new_cate = []
+    for c in cate:
+        if c not in new_cate:
+            new_cate.append(c)
+    # print(','.join(new_cate))
+    return ','.join(new_cate)
+def smart_product(list1, list2, list3):
+    # 过滤掉空列表
+    list1 = list1 if list1 else ['']
+    list2 = list2 if list2 else ['']
+    list3 = list3 if list3 else ['']
+
+    return list(product(list1, list2, list3))
+
+
+def replace_li_with_p(html):
+    if not html:
+        return ''
+
+    html = re.sub(r'<li\s*([^>]*)>', r'<p \1>', html, flags=re.IGNORECASE)
+    html = re.sub(r'</li\s*>', r'</p>', html, flags=re.IGNORECASE)
+
+    return html
+
+
+def normalize_import_images(value):
+    if not isinstance(value, str) or not value.strip():
+        return value
+    if "_39_primark" not in name:
+        return value
+    urls = []
+    for url in value.split(","):
+        url = url.strip()
+        if not url:
+            continue
+        base = url.split("?", 1)[0]
+        filename = base.rsplit("/", 1)[-1]
+        if "cdn.media.amplience.net/i/primark/" in base and "." not in filename:
+            if "?" in url:
+                url = base + ".jpg?" + url.split("?", 1)[1]
+            else:
+                url = url + ".jpg"
+        urls.append(url)
+    return ",".join(urls)
+
+
+def get_first_image(x):
+    if not x:
+        return ''
+
+    try:
+        lst = ast.literal_eval(x)
+        if isinstance(lst, list) and lst:
+            return lst[0]
+    except:
+        pass
+
+    return str(x).split(',')[0]
+
+
+def parse_list(x):
+    if not x:
+        return []
+
+    if isinstance(x, list):
+        return x
+
+    text = str(x).strip()
+    if not text:
+        return []
+
+    try:
+        if text.startswith("[") and text.endswith("]"):
+            value = ast.literal_eval(text)
+            if isinstance(value, list):
+                return value
+            return [value]
+    except:
+        pass
+
+    return [text]
+
+
+def reverse_product_groups(rows):
+    groups = []
+    current = []
+
+    for row in rows:
+        goods_class = row.get("goods_class")
+        if goods_class in {"M", "S"}:
+            if current:
+                groups.append(current)
+            current = [row]
+        else:
+            if current:
+                current.append(row)
+            else:
+                groups.append([row])
+
+    if current:
+        groups.append(current)
+
+    reversed_rows = []
+    for group in reversed(groups):
+        reversed_rows.extend(group)
+    return reversed_rows
+
+
+if __name__ == '__main__':
+    df = load_data(db_path)
+    df = preprocess(df)
+    # print(df)
+    df = build_spu_list(df,0.1)
+    df = reverse_product_groups(df)
+    out_xlsx(df, BASE_DIR / 'upload')

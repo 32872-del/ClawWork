@@ -1,0 +1,13 @@
+mixed-port: 4934
+    
+proxies:
+    - { name: 🇬🇧英国伦敦2, type: vless, server: 193.123.187.39, port: 443, uuid: ccc86dc4-4ae2-4b1b-93fa-f1ce205f18d1, udp: true, flow: xtls-rprx-vision, tls: true, skip-cert-verify: false, client-fingerprint: ios, servername: buylite.music.apple.com, reality-opts: { public-key: i7DUE1GbZSybS9hVNoLXkNBUOhy_428gM8v5fKfjS0Q, short-id: 375cd304 } }
+
+proxy-groups:
+  - name: Proxy
+    type: select
+    proxies:
+      - 🇬🇧英国伦敦2
+
+rules:
+  - MATCH,Proxy

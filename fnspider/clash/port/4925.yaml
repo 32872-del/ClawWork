@@ -1,0 +1,13 @@
+mixed-port: 4925
+    
+proxies:
+    - { name: 🇫🇷法国巴黎2, type: vless, server: 141.253.124.138, port: 443, uuid: ccc86dc4-4ae2-4b1b-93fa-f1ce205f18d1, udp: true, flow: xtls-rprx-vision, tls: true, skip-cert-verify: false, client-fingerprint: ios, servername: tv.apple.com, reality-opts: { public-key: gkl6bqL44xulia53I8gd_BtiVRzU1rsIu4WeffywLBY, short-id: 78f5a5a5 } }
+
+proxy-groups:
+  - name: Proxy
+    type: select
+    proxies:
+      - 🇫🇷法国巴黎2
+
+rules:
+  - MATCH,Proxy
