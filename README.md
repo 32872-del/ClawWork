@@ -1,40 +1,78 @@
-# ClawWork Crawler Framework
+# ClawWork 爬虫采集框架
 
-ClawWork is a private reusable product-site crawler framework built around a three-stage collection pipeline:
+ClawWork 是一个私有的电商商品采集框架，用来沉淀多站点采集脚本、通用爬虫框架、代理池运行环境、数据修复工具和项目文档。这个仓库不是公开开源项目，而是一个可运行、可复用、可交接的个人爬虫工程资产库。
 
-1. list/category collection
-2. product detail collection
-3. variant/SKU enrichment and final goods writing
+## 项目定位
 
-The repository contains the shared framework under `fnspider/`, site adapters named like `29_obi.py` and `67_lomar.py`, repair/export utilities under `tools/`, and project documentation.
+这个框架主要解决电商网站商品数据采集问题，采集目标通常包括：
 
-## What This Framework Does
+- 类目结构
+- 商品列表
+- 商品详情
+- 商品标题、价格、图片、描述
+- 多规格、多颜色、多尺码变体
+- SKU 级别库存、价格和图片
+- 后续导入平台需要的表格或数据库数据
 
-The framework is designed for e-commerce product collection. A site script focuses on site-specific parsing, while `fnspider` provides common runtime capabilities:
+项目的核心思路是把“通用采集流程”和“单站点解析逻辑”拆开：
 
-- task queues for category, product, and variant stages
-- resumable progress stored in SQLite
-- duplicate detection by stable `sole_id`
-- request abstraction for `requests`, `curl_cffi`, Botasaurus, Playwright, and Scrapling-style fetchers
-- optional local Clash proxy pool and BrightData-style rotating proxy support
-- local HTML/cache directories for debugging and repeated runs
-- export/repair tools for database cleanup, image download, and import spreadsheets
+- `fnspider/` 负责通用调度、请求、缓存、数据库、代理池和进度管理。
+- 根目录的 `NN_site.py` 脚本负责每个网站自己的类目、列表、详情和变体解析。
+- `tools/` 负责数据库去重、图片下载、目录统计、表格导出、数据修复等后处理工作。
 
-## Repository Layout
+## 核心采集流程
+
+框架采用三阶段采集模型：
+
+1. 列表/类目阶段
+   从起始类目 URL 或菜单结构中解析商品列表、分页链接、商品入口和类目信息。
+
+2. 商品详情阶段
+   进入商品页或商品 API，解析标题、价格、图片、描述、基础属性、变体入口等信息。
+
+3. 变体/SKU 阶段
+   对颜色、尺码、组合规格、库存、SKU 价格等进行补全，最终写入统一商品表。
+
+`Spider` 负责队列调度、线程控制、断点续采和阶段流转；`DataProcessor` 与 `OperateDB` 负责 SQLite 数据库、进度表和结果表；`NetworkRequest` 负责请求、浏览器、代理和缓存入口。
+
+## 目录结构
 
 ```text
-fnspider/          shared crawler framework
-tools/             database, image, export, and browser probing utilities
-study/             learning notes and crawler engineering study material
-NN_site.py         site-specific crawler adapters
-*_repair_*.py      one-off or reusable repair scripts for collected data
-requirements.txt   Python dependency list
-.env.example       local environment variable template
+fnspider/          通用爬虫框架
+fnspider/clash/    私有代理池和 Clash 运行文件
+tools/             数据库、图片、导出、修复、探测工具
+study/             爬虫学习资料、工程笔记、课程草稿
+NN_site.py         各网站采集脚本
+*_repair_*.py      针对具体站点的数据修复脚本
+docs/              框架复用说明和 Git 提交边界说明
+requirements.txt   Python 依赖列表
+.env.example       本地运行环境变量示例
 ```
 
-Daily runtime outputs are intentionally excluded from Git: `goods/`, `goods_cache/`, `downloadimg/`, `out/`, `upload/`, `logs/`, `browser_profiles/`, databases, spreadsheets, and zip packages. The private proxy pool under `fnspider/clash/` is part of this runnable project and is committed with the code.
+## 已纳入 Git 的内容
 
-## Install
+这个私有仓库会提交：
+
+- 所有站点采集脚本
+- `fnspider` 通用框架源码
+- 自建代理池相关配置和 `clash-meta.exe`
+- 数据处理、修复和导出工具
+- 学习笔记和项目研究报告
+- 依赖文件、环境变量模板和复用文档
+
+不会提交：
+
+- `goods/` 采集生成的 SQLite 数据库
+- `goods_cache/` 请求缓存
+- `downloadimg/` 下载图片
+- `out/`、`output/` 调试 HTML、探测结果和临时输出
+- `upload/` 导出表格
+- `logs/`、`error_logs/` 运行日志和错误截图
+- `browser_profiles/` 浏览器用户数据
+- `runtime_env/`、`.venv/` 本地虚拟环境
+- `*.zip` 备份压缩包
+
+## 安装依赖
 
 ```powershell
 cd F:\datawork\spider
@@ -44,31 +82,38 @@ pip install -r requirements.txt
 playwright install
 ```
 
-If a script uses browser automation through Botasaurus or Playwright, keep Chrome/Edge available on the machine.
+如果脚本使用 Botasaurus、Playwright 或本机 Chrome/Edge，需要保证浏览器环境可用。
 
-## Configure Local Runtime
+## 本地运行配置
 
-The repository is private, so the project keeps the crawler scripts and proxy runtime together. For values that often change between machines or sessions, use `.env` or PowerShell environment variables.
+常用运行参数可以通过 PowerShell 环境变量配置：
 
 ```powershell
 $env:HEADLESS = "1"
 $env:BATCH = "2"
-$env:OBI_COOKIE = "paste_browser_cookie_here"
+$env:WAIT = "1"
+```
+
+部分高防站点需要 Cookie、代理或浏览器授权态，也可以通过环境变量控制：
+
+```powershell
+$env:OBI_COOKIE = "浏览器复制出来的 Cookie"
+$env:BABYSHOP_COOKIE = "浏览器复制出来的 Cookie"
 $env:BRIGHT_USE_PROXY = "1"
 $env:BRIGHT_PROXY_URL = "http://username:password@brd.superproxy.io:33335"
 ```
 
-Do not commit `.env`, browser storage state, generated databases, exported spreadsheets, logs, caches, or downloaded images.
+`.env.example` 只作为变量名参考，真实 `.env` 不提交。
 
-## Run A Site Script
+## 运行采集脚本
 
-Every main site adapter defines a `CrawlerObject(Spider)` class and usually supports a direct run:
+每个主采集脚本一般都有 `CrawlerObject(Spider)` 类，并支持直接运行：
 
 ```powershell
 python .\67_lomar.py
 ```
 
-For a small test run, prefer environment limits when the script supports them:
+调试新站或复测旧站时，建议先用小批量参数：
 
 ```powershell
 $env:BATCH = "1"
@@ -79,32 +124,29 @@ $env:OBI_MAX_PRODUCTS = "20"
 python .\29_obi.py
 ```
 
-Generated SQLite databases are written under the configured output directory and are ignored by Git.
+采集结果默认写入 SQLite 数据库，运行结果目录不进入 Git。
 
-## Add A New Site Adapter
+## 新增网站适配方式
 
-Use an existing recent script as the template, then keep the adapter thin:
+新增一个网站时，可以从最近的成熟脚本中选择类似站点作为模板，然后完成以下工作：
 
-- define `PAYLOAD_LIST` or build start URLs from menus/API responses
-- subclass `fnspider.Spider`
-- implement `get_list`, `get_content`, and `get_more_content`
-- normalize fields to the framework schema: `handle`, `title`, `image_src`, `price`, category fields, option fields, and `body`
-- add env-driven switches for cookies, auth, browser fallback, proxy use, and small test limits
-- keep real auth data out of source code
+1. 分析网站数据来源：静态 HTML、JSON API、Next.js 数据、GraphQL、浏览器渲染、还是需要登录/Cookie。
+2. 构建 `PAYLOAD_LIST` 或起始类目列表。
+3. 实现 `get_list`，解析列表页和分页。
+4. 实现 `get_content`，解析商品详情。
+5. 实现 `get_more_content`，补全变体、尺码、SKU 和最终商品行。
+6. 增加小批量调试参数、Cookie 参数、代理开关、浏览器 fallback。
+7. 通过数据库行数、类目覆盖、商品详情抽查和导出结果验证质量。
 
-See `docs/FRAMEWORK_GUIDE.md` for the detailed adapter flow.
+详细复用说明见 `docs/FRAMEWORK_GUIDE.md`。
 
-## Current Site Assets
+## 当前项目价值
 
-The repository includes dozens of site adapters covering static HTML, JSON API, Next.js data extraction, dynamic-browser collection, proxy fallback, cookie-auth flow, and post-collection repair tasks. The detailed project analysis is in `项目采集框架研究报告.md`.
+这个仓库体现的是一个从单站点脚本逐步发展出来的采集工程体系：
 
-## Private Repository Boundary
+- 已经沉淀了几十个电商网站采集脚本。
+- 覆盖静态页面、接口采集、动态渲染、Cookie 授权、代理池、浏览器补采等多种场景。
+- 有进度表、断点续采、去重、缓存、错误日志、数据修复和导出工具。
+- 已经开始向可复用框架演进，可以继续抽象通用登录、代理重试、类目展开、图片处理和 SKU 标准化模块。
 
-This repository is intended as a private work archive and reusable crawler framework. It should include:
-
-- framework source in `fnspider/`
-- all site adapter scripts and repair scripts
-- proxy pool/runtime files required by your local crawler setup
-- documentation, dependency files, and environment templates
-
-It should not include high-volume generated data such as image downloads, SQLite results, cache snapshots, logs, browser profiles, or zip backups.
+更完整的项目分析见 `项目采集框架研究报告.md`，后续站点适配要求见 `下个网站采集适配要求.md`。
