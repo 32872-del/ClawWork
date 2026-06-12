@@ -1,0 +1,9 @@
+beautifulsoup4==4.14.3
+booktype==1.5
+botasaurus==4.0.97
+curl_cffi==0.15.0
+fake_useragent==2.2.0
+loguru==0.7.3
+lxml==6.0.4
+playwright==1.57.0
+Requests==2.33.1

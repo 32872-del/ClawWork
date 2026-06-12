@@ -1,0 +1,114 @@
+# -*- coding: utf-8 -*-
+"""
+Created on 2018-07-25 11:41:57
+---------
+@summary: parser 的基类
+---------
+@author: Boris
+@email:  boris_liu@foxmail.com
+"""
+
+class BaseParser(object):
+    def start_requests(self):
+        """
+        @summary: 添加初始url
+        ---------
+        ---------
+        @result: yield Request()
+        """
+
+        pass
+
+    def download_midware(self, request):
+        """
+        @summary: 下载中间件 可修改请求的一些参数, 或可自定义下载，然后返回 request, response
+        ---------
+        @param request:
+        ---------
+        @result: return request / request, response
+        """
+
+        pass
+
+    def validate(self, request, response):
+        """
+        @summary: 校验函数, 可用于校验response是否正确
+        若函数内抛出异常，则重试请求
+        若返回True 或 None，则进入解析函数
+        若返回False，则抛弃当前请求
+        可通过request.callback_name 区分不同的回调函数，编写不同的校验逻辑
+        ---------
+        @param request:
+        @param response:
+        ---------
+        @result: True / None / False
+        """
+
+        pass
+
+    def parse(self, request, response):
+        """
+        @summary: 默认的解析函数
+        ---------
+        @param request:
+        @param response:
+        ---------
+        @result:
+        """
+
+        pass
+
+    def exception_request(self, request, response, e):
+        """
+        @summary: 请求或者parser里解析出异常的request
+        ---------
+        @param request:
+        @param response:
+        @param e: 异常
+        ---------
+        @result: request / callback / None (返回值必须可迭代)
+        """
+
+        pass
+
+    def failed_request(self, request, response, e):
+        """
+        @summary: 超过最大重试次数的request
+        可返回修改后的request  若不返回request，则将传进来的request直接人redis的failed表。否则将修改后的request入failed表
+        ---------
+        @param request:
+        @param response:
+        @param e: 异常
+        ---------
+        @result: request / item / callback / None (返回值必须可迭代)
+        """
+
+        pass
+
+    def start_callback(self):
+        """
+        @summary: 程序开始的回调
+        ---------
+        ---------
+        @result: None
+        """
+
+        pass
+
+    def end_callback(self):
+        """
+        @summary: 程序结束的回调
+        ---------
+        ---------
+        @result: None
+        """
+
+        pass
+
+    @property
+    def name(self):
+        return self.__class__.__name__
+
+    def close(self):
+        pass
+

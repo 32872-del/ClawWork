@@ -1,0 +1,93 @@
+{
+    "Promocje": "https://einhell.pl/promocje/",
+    "Sklep": "https://einhell.pl/sklep/",
+    "Power X-Change": {
+        "Ogrodowe Urządzenia Power X-Change": "https://einhell.pl/kategoria-produktu/ogrod/narzedzia-ogrodowe-pxc/",
+        "Akumulatory I Ładowarki": {
+            "Akumulatory": "https://einhell.pl/kategoria-produktu/akumulatory/",
+            "Ładowarki": "https://einhell.pl/kategoria-produktu/ladowarki/",
+            "Akcesoria Do Akumulatorów": "https://einhell.pl/kategoria-produktu/akcesoria-do-akumulatorow/"
+        }
+    },
+    "Warsztat": {
+        "Elektronarzędzia": {
+            "Seria Professional": "https://einhell.pl/kategoria-produktu/elektronarzedzia/pro/",
+            "Wiertarko-wkrętarki": "https://einhell.pl/kategoria-produktu/elektronarzedzia/elektronarzedzia-reczne/wiertarko-wkretarki/",
+            "Wiertarki Udarowe": "https://einhell.pl/kategoria-produktu/elektronarzedzia/elektronarzedzia-reczne/wiertarki-udarowe/",
+            "Młoty Udarowe": "https://einhell.pl/kategoria-produktu/elektronarzedzia/elektronarzedzia-reczne/mloty-udarowe/",
+            "Szlifierki Kątowe": "https://einhell.pl/kategoria-produktu/elektronarzedzia/elektronarzedzia-reczne/szlifierki-katowe/",
+            "Multiszlifierki": "https://einhell.pl/kategoria-produktu/multiszlifierki/",
+            "Frezarki": "https://einhell.pl/kategoria-produktu/elektronarzedzia/elektronarzedzia-reczne/frezarki/",
+            "Pilarki Tarczowe": "https://einhell.pl/kategoria-produktu/elektronarzedzia/elektronarzedzia-reczne/pilarki-tarczowe/",
+            "Strugi Ręczne": "https://einhell.pl/kategoria-produktu/strugi-reczne/",
+            "Szlifierki Oscylacyjne": "https://einhell.pl/kategoria-produktu/elektronarzedzia/elektronarzedzia-reczne/szlifierki-oscylacyjne/",
+            "Szlifierki Taśmowe": "https://einhell.pl/kategoria-produktu/elektronarzedzia/elektronarzedzia-reczne/szlifierki-tasmowe/",
+            "Szlifierki Do Gipsu": "https://einhell.pl/kategoria-produktu/szlifierki-do-gipsu/",
+            "Mieszadła": "https://einhell.pl/kategoria-produktu/mieszadla/",
+            "Pistolety Natryskowe": "https://einhell.pl/kategoria-produktu/elektronarzedzia/elektronarzedzia-reczne/pistolety-natryskowe/",
+            "Piły Szablaste": "https://einhell.pl/kategoria-produktu/elektronarzedzia/elektronarzedzia-reczne/pily-szablaste/",
+            "Narzędzia Wielofunkcyjne": "https://einhell.pl/kategoria-produktu/elektronarzedzia/elektronarzedzia-reczne/narzedzia-wielofunkcyjne/"
+        },
+        "Urządzenia Stacjonarne": {
+            "Przecinarki Do Drewna": "https://einhell.pl/kategoria-produktu/elektronarzedzia/urzadzenia-stacjonarne/przecinarki-do-drewna/",
+            "Piły Ukośne": "https://einhell.pl/kategoria-produktu/elektronarzedzia/urzadzenia-stacjonarne/pily-ukosne-urzadzenia-stacjonarne/",
+            "Piły Taśmowe": "https://einhell.pl/kategoria-produktu/pily-tasmowe/",
+            "Szlifierki Stołowe": "https://einhell.pl/kategoria-produktu/elektronarzedzia/urzadzenia-stacjonarne/szlifierki-stolowe/",
+            "Wiertarki Kolumnowe": "https://einhell.pl/kategoria-produktu/elektronarzedzia/urzadzenia-stacjonarne/wiertarki-kolumnowe/",
+            "Przecinarki Do Glazury": "https://einhell.pl/kategoria-produktu/elektronarzedzia/urzadzenia-stacjonarne/przecinarki-do-glazury/",
+            "Agregaty Prądotwórcze": "https://einhell.pl/kategoria-produktu/elektronarzedzia/urzadzenia-stacjonarne/agregaty-pradotworcze/",
+            "Wciągarki": "https://einhell.pl/kategoria-produktu/elektronarzedzia/urzadzenia-stacjonarne/wciagarki/"
+        },
+        "Urządzenia Czyszczące": {
+            "Odkurzacze": "https://einhell.pl/kategoria-produktu/elektronarzedzia/urzadzenia-czyszczace/odkurzacze/",
+            "Szczotki": "https://einhell.pl/kategoria-produktu/akcesoria/szczotki/",
+            "Myjki I Inne": "https://einhell.pl/kategoria-produktu/elektronarzedzia/urzadzenia-czyszczace/myjki-i-inne/"
+        },
+        "Narzędzia Samochodowe": {
+            "Prostowniki I Jump Startery": "https://einhell.pl/kategoria-produktu/elektronarzedzia/narzedzia-samochodowe/prostowniki-i-jump-startery/",
+            "Kompresory": "https://einhell.pl/kategoria-produktu/elektronarzedzia/narzedzia-samochodowe/kompresory-narzedzia-samochodowe/",
+            "Polerki": "https://einhell.pl/kategoria-produktu/elektronarzedzia/narzedzia-samochodowe/polerki/"
+        }
+    },
+    "Ogród": {
+        "Kosiarki": {
+            "Kosiarki Akumulatorowe": "https://einhell.pl/kategoria-produktu/kosiarki-akumulatorowe/",
+            "Kosiarki Spalinowe": "https://einhell.pl/kategoria-produktu/ogrod/kosiarki/kosiarki-spalinowe/",
+            "Kosiarki Elektryczne": "https://einhell.pl/kategoria-produktu/kosiarki-elektryczne/",
+            "Roboty Koszące": "https://einhell.pl/kategoria-produktu/ogrod/narzedzia-ogrodowe-pxc/roboty-koszace/"
+        },
+        "Aeratory I Wertykulatory": "https://einhell.pl/kategoria-produktu/ogrod/aeratory-i-wertykulatory/",
+        "Glebogryzarki": "https://einhell.pl/kategoria-produktu/ogrod/glebogryzarki/",
+        "Podkaszarki I Kosy": "https://einhell.pl/kategoria-produktu/ogrod/podkaszarki-i-kosy/",
+        "Pompy Wodne": {
+            "Pompy Uniwersalne Do Domu I Ogrodu": "https://einhell.pl/kategoria-produktu/pompy-uniwersalne-do-domu-i-ogrodu/",
+            "Pompy Zanurzeniowe Do Wody Brudnej": "https://einhell.pl/kategoria-produktu/pompy-zanurzeniowe-do-wody-brudnej/",
+            "Pompy Zanurzeniowe Do Wody Czystej": "https://einhell.pl/kategoria-produktu/pompy-zanurzeniowe-do-wody-czystej/",
+            "Hydrofory": "https://einhell.pl/kategoria-produktu/ogrod/pompy-wodne/hydrofory/"
+        },
+        "Dmuchawy I Odkurzacze": "https://einhell.pl/kategoria-produktu/ogrod/dmuchawy-i-odkurzacze/",
+        "Nożyce Do Traw I Żywopłotu": "https://einhell.pl/kategoria-produktu/ogrod/nozyce-do-traw-i-zywoplotu/",
+        "Piły I Nożyce Do Gałęzi": {
+            "Piły Łańcuchowe": "https://einhell.pl/kategoria-produktu/elektronarzedzia/elektronarzedzia-reczne/pily-lancuchowe/"
+        },
+        "Urządzenia Ogrodowe Na Wysięgniku": "https://einhell.pl/kategoria-produktu/ogrod/urzadzenia-ogrodowe-na-wysiegniku/",
+        "Opryskiwacze": "https://einhell.pl/kategoria-produktu/ogrod/opryskiwacze/",
+        "Pozostałe Narzędzia Ogrodowe": "https://einhell.pl/kategoria-produktu/pozostale-narzedzia-ogrodowe/",
+        "Narzędzia Ogrodowe PXC": "https://einhell.pl/kategoria-produktu/ogrod/narzedzia-ogrodowe-pxc/"
+    },
+    "Akcesoria": {
+        "Akcesoria Do Akumulatorów": "https://einhell.pl/kategoria-produktu/power-x-change/akumulatory-i-ladowarki/akcesoria-do-akumulatorow/",
+        "Akcesoria Do Elektronarzędzi": "https://einhell.pl/kategoria-produktu/akcesoria-do-elektronarzedzi/",
+        "Akcesoria Do Narzędzi Wielofunkcyjnych": "https://einhell.pl/kategoria-produktu/akcesoria-do-narzedzi-wielofunkcyjnych/",
+        "Akcesoria Do Wiertarko-wkrętarek": "https://einhell.pl/kategoria-produktu/akcesoria-do-wiertarko-wkretarek/",
+        "Akcesoria Do Młotów Udarowych": "https://einhell.pl/kategoria-produktu/akcesoria-do-mlotow-udarowych/",
+        "Akcesoria Do Frezarek / Strugów": "https://einhell.pl/kategoria-produktu/akcesoria-do-frezarek-strugow/",
+        "Akcesoria Do Szlifierek/polerek": "https://einhell.pl/kategoria-produktu/akcesoria-do-szlifierek-polerek/",
+        "Akcesoria Do Odkurzaczy": "https://einhell.pl/kategoria-produktu/akcesoria/akcesoria-do-odkurzaczy/",
+        "Akcesoria Do Pistoletów Malarskich": "https://einhell.pl/kategoria-produktu/akcesoria-do-pistoletow-malarskich/",
+        "Akcesoria Do Pił": "https://einhell.pl/kategoria-produktu/akcesoria-do-pil/",
+        "Akcesoria Do Podkaszarek": "https://einhell.pl/kategoria-produktu/akcesoria-do-podkaszarek/",
+        "Zestawy Akcesoriów": "https://einhell.pl/kategoria-produktu/akcesoria/zestawy-akcesoriow/",
+        "Organizacja Warsztatu": "https://einhell.pl/organizacja-watsztatu/"
+    }
+}

@@ -1,0 +1,44 @@
+{
+    "New": "https://prosto.com/mezczyzna/nowosci",
+    "Men": {
+        "Mężczyzna": {
+            "Nowości": "https://prosto.com/mezczyzna/nowosci",
+            "Kurtki": "https://prosto.com/mezczyzna/kurtki",
+            "Czapki": "https://prosto.com/mezczyzna/akcesoria/czapki",
+            "Bluzy": "https://prosto.com/mezczyzna/bluzy",
+            "Spodnie": "https://prosto.com/mezczyzna/spodnie",
+            "Koszulki": "https://prosto.com/mezczyzna/koszulki",
+            "Akcesoria": "https://prosto.com/mezczyzna/akcesoria",
+            "Koszule": "https://prosto.com/mezczyzna/koszule",
+            "Longsleeve": "https://prosto.com/mezczyzna/koszulki/longsleeve",
+            "Szorty": "https://prosto.com/mezczyzna/spodenki",
+            "Sale": "https://prosto.com/sale/mezczyzna"
+        }
+    },
+    "Women": {
+        "Kobieta": {
+            "Kurtki": "https://prosto.com/kobieta/kurtki",
+            "Koszulki": "https://prosto.com/kobieta/koszulki",
+            "Koszule": "https://prosto.com/kobieta/koszule",
+            "Longsleeve": "https://prosto.com/catalog/category/view/s/longsleeve/id/23/",
+            "Bluzy": "https://prosto.com/kobieta/bluzy",
+            "Spodnie": "https://prosto.com/kobieta/spodnie",
+            "Czapki": "https://prosto.com/kobieta/czapki",
+            "Akcesoria": "https://prosto.com/kobieta/akcesoria",
+            "Sale": "https://prosto.com/sale/kobieta"
+        }
+    },
+    "Kids": "https://prosto.com/dziecko",
+    "Label": {
+        "Sklep": {
+            "Wszystko": "https://prosto.com/label",
+            "Muzyka": "https://prosto.com/label/muzyka",
+            "Książki": "https://prosto.com/label/ksiazki",
+            "Merch": "https://prosto.com/label/merch"
+        },
+        "Artyści": {
+            "Wszystko": "https://prosto.com/label",
+            "Wojtek Sokół": "https://prosto.com/wojteksokol"
+        }
+    }
+}

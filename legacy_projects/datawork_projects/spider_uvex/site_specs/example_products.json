@@ -1,0 +1,46 @@
+{
+  "version": "1.0",
+  "site": "example_products",
+  "goal": "示例：采集商品标题、价格、图片，支持 JS 渲染和滚动加载",
+  "mode": "browser",
+  "start_urls": [
+    {
+      "url": "https://example.com/products"
+    }
+  ],
+  "pagination": {
+    "page_param": "p",
+    "max_pages": 3
+  },
+  "list": {
+    "item_link": "a.product-item-link@href"
+  },
+  "detail": {
+    "title": "h1.page-title, h1",
+    "price": ".price-box .price, .price",
+    "image_src": ".product.media img@src, img.product-image-photo@src",
+    "body": [
+      ".product.attribute.overview .value@html",
+      ".product.attribute.description .value@html"
+    ]
+  },
+  "variants": {
+    "links": "a.product-item-photo-related@href"
+  },
+  "wait_selector": "a.product-item-link",
+  "sleep_time": 5,
+  "scroll_count": 2,
+  "scroll_delay": 1.2,
+  "dedupe": [
+    "categories_1",
+    "categories_2",
+    "categories_3",
+    "url"
+  ],
+  "required_fields": [
+    "handle",
+    "title",
+    "image_src",
+    "price"
+  ]
+}

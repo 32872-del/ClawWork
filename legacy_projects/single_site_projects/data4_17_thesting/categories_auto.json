@@ -1,0 +1,206 @@
+{
+  "Dames": {
+    "Kleding": {
+      "_self": "https://www.thesting.com/nl-nl/dames/kleding",
+      "Basics": "https://www.thesting.com/nl-nl/dames/kleding/basics",
+      "Blazers": "https://www.thesting.com/nl-nl/dames/kleding/blazers",
+      "Blouses": "https://www.thesting.com/nl-nl/dames/kleding/blouses",
+      "Broeken": {
+        "_self": "https://www.thesting.com/nl-nl/dames/kleding/broeken",
+        "Cargobroeken": "https://www.thesting.com/nl-nl/dames/kleding/broeken/cargobroeken",
+        "Flared Broeken": "https://www.thesting.com/nl-nl/dames/kleding/broeken/flared-broeken",
+        "Joggingbroeken": "https://www.thesting.com/nl-nl/dames/kleding/broeken/joggingbroeken",
+        "Pantalons": "https://www.thesting.com/nl-nl/dames/kleding/broeken/pantalons",
+        "Sweatpants": "https://www.thesting.com/nl-nl/dames/kleding/broeken/sweatpants"
+      },
+      "Co Ord Sets": "https://www.thesting.com/nl-nl/dames/kleding/co-ord-sets",
+      "Gilets": "https://www.thesting.com/nl-nl/dames/kleding/gilets",
+      "Jassen": {
+        "_self": "https://www.thesting.com/nl-nl/dames/kleding/jassen",
+        "Bomberjacks": "https://www.thesting.com/nl-nl/dames/kleding/jassen/bomberjacks",
+        "Jacks": "https://www.thesting.com/nl-nl/dames/kleding/jassen/jacks",
+        "Spijkerjassen": "https://www.thesting.com/nl-nl/dames/kleding/jassen/spijkerjassen"
+      },
+      "Jeans": {
+        "_self": "https://www.thesting.com/nl-nl/dames/kleding/jeans",
+        "Baggy Jeans": "https://www.thesting.com/nl-nl/dames/kleding/jeans/baggy-jeans",
+        "Barrel Jeans": "https://www.thesting.com/nl-nl/dames/kleding/jeans/barrel-jeans",
+        "Flared Jeans": "https://www.thesting.com/nl-nl/dames/kleding/jeans/flared-jeans",
+        "Skinny Jeans": "https://www.thesting.com/nl-nl/dames/kleding/jeans/skinny-jeans",
+        "Straight Leg Jeans": "https://www.thesting.com/nl-nl/dames/kleding/jeans/straight-leg-jeans",
+        "Wide Leg Jeans": "https://www.thesting.com/nl-nl/dames/kleding/jeans/wide-leg-jeans"
+      },
+      "Jumpsuits En Playsuits": {
+        "_self": "https://www.thesting.com/nl-nl/dames/kleding/jumpsuits-en-playsuits",
+        "Jumpsuits": "https://www.thesting.com/nl-nl/dames/kleding/jumpsuits-en-playsuits/jumpsuits"
+      },
+      "Jurken": {
+        "_self": "https://www.thesting.com/nl-nl/dames/kleding/jurken",
+        "Bodycon Jurken": "https://www.thesting.com/nl-nl/dames/kleding/jurken/bodycon-jurken",
+        "Denim Jurken": "https://www.thesting.com/nl-nl/dames/kleding/jurken/denim-jurken",
+        "Maxi Jurken": "https://www.thesting.com/nl-nl/dames/kleding/jurken/maxi-jurken"
+      },
+      "Looks": "https://www.thesting.com/nl-nl/dames/kleding/looks",
+      "Rokken": {
+        "_self": "https://www.thesting.com/nl-nl/dames/kleding/rokken",
+        "Mini Rokken": "https://www.thesting.com/nl-nl/dames/kleding/rokken/mini-rokken"
+      },
+      "Schoenen": "https://www.thesting.com/nl-nl/dames/kleding/schoenen",
+      "Shorts": {
+        "_self": "https://www.thesting.com/nl-nl/dames/kleding/shorts",
+        "Denim Shorts": "https://www.thesting.com/nl-nl/dames/kleding/shorts/denim-shorts"
+      },
+      "Singlets": "https://www.thesting.com/nl-nl/dames/kleding/singlets",
+      "Skorts": "https://www.thesting.com/nl-nl/dames/kleding/skorts",
+      "Sweaters En Hoodies": "https://www.thesting.com/nl-nl/dames/kleding/sweaters-en-hoodies",
+      "Swimwear": {
+        "_self": "https://www.thesting.com/nl-nl/dames/kleding/swimwear",
+        "Bikini Broekjes": "https://www.thesting.com/nl-nl/dames/kleding/swimwear/bikini-broekjes",
+        "Bikini Sets": "https://www.thesting.com/nl-nl/dames/kleding/swimwear/bikini-sets",
+        "Bikini Tops": "https://www.thesting.com/nl-nl/dames/kleding/swimwear/bikini-tops"
+      },
+      "T Shirts": "https://www.thesting.com/nl-nl/dames/kleding/t-shirts",
+      "Tops": {
+        "_self": "https://www.thesting.com/nl-nl/dames/kleding/tops",
+        "Bodys": "https://www.thesting.com/nl-nl/dames/kleding/tops/bodys",
+        "Crop Tops": "https://www.thesting.com/nl-nl/dames/kleding/tops/crop-tops"
+      },
+      "Truien En Vesten": {
+        "_self": "https://www.thesting.com/nl-nl/dames/kleding/truien-en-vesten",
+        "Coltruien": "https://www.thesting.com/nl-nl/dames/kleding/truien-en-vesten/coltruien",
+        "Truien": "https://www.thesting.com/nl-nl/dames/kleding/truien-en-vesten/truien",
+        "Vesten": "https://www.thesting.com/nl-nl/dames/kleding/truien-en-vesten/vesten"
+      }
+    },
+    "Accessoires": {
+      "_self": "https://www.thesting.com/nl-nl/dames/accessoires",
+      "Haaraccessoires": "https://www.thesting.com/nl-nl/dames/accessoires/haaraccessoires",
+      "Mutsen": "https://www.thesting.com/nl-nl/dames/accessoires/mutsen",
+      "Riemen": "https://www.thesting.com/nl-nl/dames/accessoires/riemen",
+      "Sieraden": "https://www.thesting.com/nl-nl/dames/accessoires/sieraden",
+      "Sjaals": "https://www.thesting.com/nl-nl/dames/accessoires/sjaals",
+      "Tassen": "https://www.thesting.com/nl-nl/dames/accessoires/tassen",
+      "Zonnebrillen": "https://www.thesting.com/nl-nl/dames/accessoires/zonnebrillen"
+    },
+    "Campagne": {
+      "_self": "https://www.thesting.com/nl-nl/dames/campagne",
+      "Beachwear": "https://www.thesting.com/nl-nl/dames/campagne/beachwear",
+      "Denim": "https://www.thesting.com/nl-nl/dames/campagne/denim",
+      "Dive Into Summer": "https://www.thesting.com/nl-nl/dames/campagne/dive-into-summer",
+      "Festival Outfits": {
+        "_self": "https://www.thesting.com/nl-nl/dames/campagne/festival-outfits",
+        "Festival Jurkjes": "https://www.thesting.com/nl-nl/dames/campagne/festival-outfits/festival-jurkjes",
+        "Festival Tops": "https://www.thesting.com/nl-nl/dames/campagne/festival-outfits/festival-tops"
+      },
+      "Koningsdag Kleding": "https://www.thesting.com/nl-nl/dames/campagne/koningsdag-kleding",
+      "Party Outfits": {
+        "Feestjurken": "https://www.thesting.com/nl-nl/dames/campagne/party-outfits/feestjurken"
+      }
+    },
+    "Hot Items": "https://www.thesting.com/nl-nl/dames/hot-items",
+    "Merken": {
+      "_self": "https://www.thesting.com/nl-nl/dames/merken",
+      "Amy Ivy": {
+        "_self": "https://www.thesting.com/nl-nl/dames/merken/amy-ivy",
+        "Amy Ivy Alle Kleding": "https://www.thesting.com/nl-nl/dames/merken/amy-ivy/amy-ivy-alle-kleding"
+      },
+      "Club Republique": "https://www.thesting.com/nl-nl/dames/merken/club-republique",
+      "Melting Stockholm": {
+        "_self": "https://www.thesting.com/nl-nl/dames/merken/melting-stockholm",
+        "Melting Stockholm Alle Kleding": "https://www.thesting.com/nl-nl/dames/merken/melting-stockholm/melting-stockholm-alle-kleding"
+      }
+    },
+    "New In": "https://www.thesting.com/nl-nl/dames/new-in",
+    "Special Offers": "https://www.thesting.com/nl-nl/dames/special-offers"
+  },
+  "Heren": {
+    "Accessoires": {
+      "_self": "https://www.thesting.com/nl-nl/heren/accessoires",
+      "Zonnebrillen": "https://www.thesting.com/nl-nl/heren/accessoires/zonnebrillen"
+    },
+    "Bestsellers": "https://www.thesting.com/nl-nl/heren/bestsellers",
+    "Campagne": {
+      "_self": "https://www.thesting.com/nl-nl/heren/campagne",
+      "Festival Outfits": "https://www.thesting.com/nl-nl/heren/campagne/festival-outfits",
+      "Koningsdag Kleding": "https://www.thesting.com/nl-nl/heren/campagne/koningsdag-kleding",
+      "Linnen Kleding": "https://www.thesting.com/nl-nl/heren/campagne/linnen-kleding"
+    },
+    "Kleding": {
+      "_self": "https://www.thesting.com/nl-nl/heren/kleding",
+      "Basics": {
+        "_self": "https://www.thesting.com/nl-nl/heren/kleding/basics",
+        "Basic T Shirts": "https://www.thesting.com/nl-nl/heren/kleding/basics/basic-t-shirts"
+      },
+      "Blazers": "https://www.thesting.com/nl-nl/heren/kleding/blazers",
+      "Broeken": {
+        "_self": "https://www.thesting.com/nl-nl/heren/kleding/broeken",
+        "Cargobroeken": "https://www.thesting.com/nl-nl/heren/kleding/broeken/cargobroeken",
+        "Chinos": "https://www.thesting.com/nl-nl/heren/kleding/broeken/chinos",
+        "Joggingbroeken": "https://www.thesting.com/nl-nl/heren/kleding/broeken/joggingbroeken",
+        "Pantalons": "https://www.thesting.com/nl-nl/heren/kleding/broeken/pantalons",
+        "Sweatpants": "https://www.thesting.com/nl-nl/heren/kleding/broeken/sweatpants"
+      },
+      "Co Ord Sets": "https://www.thesting.com/nl-nl/heren/kleding/co-ord-sets",
+      "Jassen": {
+        "_self": "https://www.thesting.com/nl-nl/heren/kleding/jassen",
+        "Bodywarmers": "https://www.thesting.com/nl-nl/heren/kleding/jassen/bodywarmers",
+        "Softshell Jassen": "https://www.thesting.com/nl-nl/heren/kleding/jassen/softshell-jassen"
+      },
+      "Jeans": {
+        "_self": "https://www.thesting.com/nl-nl/heren/kleding/jeans",
+        "Loose Fit Jeans": "https://www.thesting.com/nl-nl/heren/kleding/jeans/loose-fit-jeans"
+      },
+      "Korte Broeken": {
+        "_self": "https://www.thesting.com/nl-nl/heren/kleding/korte-broeken",
+        "Denim Shorts": "https://www.thesting.com/nl-nl/heren/kleding/korte-broeken/denim-shorts"
+      },
+      "Looks": "https://www.thesting.com/nl-nl/heren/kleding/looks",
+      "Ondergoed": "https://www.thesting.com/nl-nl/heren/kleding/ondergoed",
+      "Overhemden": "https://www.thesting.com/nl-nl/heren/kleding/overhemden",
+      "Overshirts": "https://www.thesting.com/nl-nl/heren/kleding/overshirts",
+      "Polos": "https://www.thesting.com/nl-nl/heren/kleding/polos",
+      "Schoenen": {
+        "_self": "https://www.thesting.com/nl-nl/heren/kleding/schoenen",
+        "Sneakers": "https://www.thesting.com/nl-nl/heren/kleding/schoenen/sneakers"
+      },
+      "Singlets": "https://www.thesting.com/nl-nl/heren/kleding/singlets",
+      "Sweaters En Hoodies": {
+        "_self": "https://www.thesting.com/nl-nl/heren/kleding/sweaters-en-hoodies",
+        "Hoodies": "https://www.thesting.com/nl-nl/heren/kleding/sweaters-en-hoodies/hoodies",
+        "Sweaters": "https://www.thesting.com/nl-nl/heren/kleding/sweaters-en-hoodies/sweaters"
+      },
+      "T Shirts": "https://www.thesting.com/nl-nl/heren/kleding/t-shirts",
+      "Truien En Vesten": {
+        "_self": "https://www.thesting.com/nl-nl/heren/kleding/truien-en-vesten",
+        "Truien": "https://www.thesting.com/nl-nl/heren/kleding/truien-en-vesten/truien",
+        "Vesten": "https://www.thesting.com/nl-nl/heren/kleding/truien-en-vesten/vesten"
+      },
+      "Zwembroeken": "https://www.thesting.com/nl-nl/heren/kleding/zwembroeken"
+    },
+    "Merken": {
+      "_self": "https://www.thesting.com/nl-nl/heren/merken",
+      "Anti Blue": {
+        "_self": "https://www.thesting.com/nl-nl/heren/merken/anti-blue",
+        "Anti Blue Alle Kleding": "https://www.thesting.com/nl-nl/heren/merken/anti-blue/anti-blue-alle-kleding"
+      },
+      "Daily Aesthetikz": {
+        "_self": "https://www.thesting.com/nl-nl/heren/merken/daily-aesthetikz",
+        "Daily Aesthetikz Alle Kleding": "https://www.thesting.com/nl-nl/heren/merken/daily-aesthetikz/daily-aesthetikz-alle-kleding"
+      },
+      "Hallinger": {
+        "_self": "https://www.thesting.com/nl-nl/heren/merken/hallinger",
+        "Hallinger Alle Kleding": "https://www.thesting.com/nl-nl/heren/merken/hallinger/hallinger-alle-kleding"
+      },
+      "Lost Minds": {
+        "_self": "https://www.thesting.com/nl-nl/heren/merken/lost-minds",
+        "Lost Minds Alle Kleding": "https://www.thesting.com/nl-nl/heren/merken/lost-minds/lost-minds-alle-kleding"
+      },
+      "Stangata": {
+        "_self": "https://www.thesting.com/nl-nl/heren/merken/stangata",
+        "Stangata Alle Kleding": "https://www.thesting.com/nl-nl/heren/merken/stangata/stangata-alle-kleding"
+      }
+    },
+    "New In": "https://www.thesting.com/nl-nl/heren/new-in",
+    "Special Offers": "https://www.thesting.com/nl-nl/heren/special-offers"
+  }
+}

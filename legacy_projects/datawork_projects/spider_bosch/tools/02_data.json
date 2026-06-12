@@ -1,0 +1,81 @@
+{
+    "Produkte": {
+        "Waschen & Trocknen": {
+            "Waschmaschinen": "https://www.bosch-home.com/de/de/category/waschen-trocknen/waschmaschinen",
+            "Wäschetrockner": "https://www.bosch-home.com/de/de/category/waschen-trocknen/waeschetrockner",
+            "Waschmaschine Mit Trockner": "https://www.bosch-home.com/de/de/category/waschen-trocknen/waschtrockner",
+            "Zubehör": "https://www.bosch-home.com/de/de/category/waschen-trocknen/zubehoer-trockner",
+            "Reinigung & Pflege": "https://www.bosch-home.com/de/de/category/waschen-trocknen/pflege-reinigung"
+        },
+        "Geschirrspüler": {
+            "Einbaugeschirrspüler": "https://www.bosch-home.com/de/de/category/geschirrspueler/einbaugeschirrspueler",
+            "Freistehende Geschirrspüler": "https://www.bosch-home.com/de/de/category/geschirrspueler/geschirrspueler-freistehend",
+            "Zubehör": "https://www.bosch-home.com/de/de/category/geschirrspueler/zubehoer-geschirrspueler",
+            "Reinigung & Pflege": "https://www.bosch-home.com/de/de/category/geschirrspueler/pflege-reinigung"
+        },
+        "Kühlen & Gefrieren": {
+            "Kühl-Gefrier-Kombinationen": "https://www.bosch-home.com/de/de/category/kuehlen-gefrieren/kuehl-gefrier-kombinationen",
+            "Kühlschränke": "https://www.bosch-home.com/de/de/category/kuehlen-gefrieren/kuehlschraenke",
+            "Side-by-Side Kühl-Gefrier-Kombinationen": "https://www.bosch-home.com/de/de/category/kuehlen-gefrieren/side-by-side-kuehlschraenke",
+            "French Door": "https://www.bosch-home.com/de/de/category/kuehlen-gefrieren/french-door",
+            "Gefrierschränke": "https://www.bosch-home.com/de/de/category/kuehlen-gefrieren/gefrierschraenke",
+            "Weinkühlschränke": "https://www.bosch-home.com/de/de/category/kuehlen-gefrieren/weinkuehlschraenke",
+            "Zubehör": "https://www.bosch-home.com/de/de/category/kuehlen-gefrieren/zubehoer-kuehlschraenke-gefrierschraenke",
+            "Reinigung & Pflege": "https://www.bosch-home.com/de/de/category/kuehlen-gefrieren/pflege-reinigung"
+        },
+        "Kochen & Backen": {
+            "Herde Und Backöfen": "https://www.bosch-home.com/de/de/category/kochen-backen/herde-backoefen",
+            "Kochfelder": "https://www.bosch-home.com/de/de/category/kochen-backen/kochfelder",
+            "Gaskochfelder": "https://www.bosch-home.com/de/de/category/kochen-backen/gaskochfelder",
+            "Freistehende Herde": "https://www.bosch-home.com/de/de/category/kochen-backen/freistehende-herde",
+            "Dampfbacköfen Und Dampfgarer": "https://www.bosch-home.com/de/de/category/kochen-backen/dampfbackoefen-dampfgarer",
+            "Mikrowellen": "https://www.bosch-home.com/de/de/category/kochen-backen/mikrowellen",
+            "Dunstabzugshauben": "https://www.bosch-home.com/de/de/category/kochen-backen/dunstabzugshauben",
+            "Wärmeschubladen": "https://www.bosch-home.com/de/de/category/kochen-backen/waermeschubladen",
+            "Kontaktgrills": "https://www.bosch-home.com/de/de/category/kochen-backen/kontaktgrill",
+            "Zubehör": "https://www.bosch-home.com/de/de/category/kochen-backen/kochzubehoer-backzubehoer",
+            "Reinigung & Pflege": "https://www.bosch-home.com/de/de/category/kochen-backen/pflege-reinigung"
+        },
+        "Cookit Küchenmaschine Mit Kochfunktion": {
+            "Cookit Küchenmaschine Mit Kochfunktion": "https://www.bosch-home.com/de/de/category/kuechenmaschinemitkochfunktion",
+            "Zubehör Für Cookit": "https://www.bosch-home.com/de/de/category/kuechenmaschinemitkochfunktion/cookit-zubehoer"
+        },
+        "Küchenmaschinen": {
+            "Küchenmaschinen Serie": "https://www.bosch-home.com/de/de/category/kuechenmaschinen/mum-kuechenmaschinen",
+            "Kompakt-Küchenmaschine": "https://www.bosch-home.com/de/de/category/kuechenmaschinen/kompakt-kuechenmaschinen",
+            "Zubehör Für Küchenmaschinen": "https://www.bosch-home.com/de/de/category/kuechenmaschinen/zubehoer-kuechenmaschinen"
+        },
+        "Kleine Küchengeräte": {
+            "Heißluftfritteusen": "https://www.bosch-home.com/de/de/category/kuechengeraete/air-fryer",
+            "Stabmixer": "https://www.bosch-home.com/de/de/category/kuechengeraete/stabmixer",
+            "Handrührer": "https://www.bosch-home.com/de/de/category/kuechengeraete/handruehrgeraete",
+            "Standmixer": "https://www.bosch-home.com/de/de/category/kuechengeraete/standmixer",
+            "Entsafter & Saftpressen": "https://www.bosch-home.com/de/de/category/kuechengeraete/entsafter-saftpressen",
+            "Universalzerkleinerer": "https://www.bosch-home.com/de/de/category/kuechengeraete/universalzerkleinerer",
+            "Toaster": "https://www.bosch-home.com/de/de/category/kuechengeraete/toaster",
+            "Wasserkocher": "https://www.bosch-home.com/de/de/category/kuechengeraete/wasserkocher",
+            "Fleischwölfe": "https://www.bosch-home.com/de/de/category/kuechengeraete/fleischwoelfe",
+            "Kontaktgrills": "https://www.bosch-home.com/de/de/category/kuechengeraete/kontaktgrill"
+        },
+        "Kaffeemaschinen": {
+            "Kaffeevollautomaten": "https://www.bosch-home.com/de/de/category/kaffeemaschinen/kaffeevollautomaten",
+            "Einbau-Kaffeevollautomaten": "https://www.bosch-home.com/de/de/category/kaffeemaschinen/einbau-kaffeevollautomaten",
+            "Filterkaffeemaschinen": "https://www.bosch-home.com/de/de/category/kaffeemaschinen/filterkaffeemaschinen",
+            "Kaffeemühlen": "https://www.bosch-home.com/de/de/category/kaffeemaschinen/kaffeemuehlen",
+            "TASSIMO Kapselmaschinen": "https://www.bosch-home.com/de/de/category/kaffeemaschinen/tassimo-kapselmaschinen",
+            "Zubehör": "https://www.bosch-home.com/de/de/category/kaffeemaschinen/zubehoer-kaffeemaschinen",
+            "Reinigung & Pflege": "https://www.bosch-home.com/de/de/category/kaffeemaschinen/entkalkung-reinigung"
+        },
+        "Staubsauger": {
+            "Akku-Staubsauger": "https://www.bosch-home.com/de/de/category/staubsauger/kabellose-handstaubsauger",
+            "Saugroboter": "https://www.bosch-home.com/de/de/category/staubsauger/saugroboter",
+            "Beutellose Staubsauger": "https://www.bosch-home.com/de/de/category/staubsauger/beutellose-staubsauger",
+            "Staubsauger Mit Beutel": "https://www.bosch-home.com/de/de/category/staubsauger/staubsauger-mit-beutel",
+            "Handstaubsauger": "https://www.bosch-home.com/de/de/category/staubsauger/akkusauger",
+            "Zubehör Für Akku-Staubsauger": "https://www.bosch-home.com/de/de/category/staubsauger/zubehoer-akkustaubsauger",
+            "Zubehör Für Staubsauger": "https://www.bosch-home.com/de/de/category/staubsauger/zubehoer-staubsauger",
+            "Built In Cleaning Robot": "https://www.bosch-home.com/de/de/category/staubsauger/built-in-cleaning-robot",
+            "Zubehör Für Saugroboter": "https://www.bosch-home.com/de/de/category/staubsauger/zubehoer-staubsauger/bosch-saugroboter-zubehoer-shop"
+        }
+    }
+}

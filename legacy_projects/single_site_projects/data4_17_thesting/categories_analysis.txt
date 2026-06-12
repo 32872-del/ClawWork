@@ -1,0 +1,56 @@
+================================================================================
+The Sting 分类结构分析报告
+================================================================================
+
+1. 基本统计
+--------------------------------------------------------------------------------
+   总分类数: 130
+   最大层级: 3
+
+   Dames: 76 个分类
+   Heren: 54 个分类
+
+2. 层级分布
+--------------------------------------------------------------------------------
+   第 2 级: 14 个分类
+   第 3 级: 63 个分类
+   第 4 级: 53 个分类
+
+3. 使用 _self 的分类（有子分类的父分类）
+--------------------------------------------------------------------------------
+   共 34 个
+
+   - Dames > Kleding (21 个子分类)
+     URL: https://www.thesting.com/nl-nl/dames/kleding
+   - Dames > Kleding > Broeken (5 个子分类)
+     URL: https://www.thesting.com/nl-nl/dames/kleding/broeken
+   - Dames > Kleding > Jassen (3 个子分类)
+     URL: https://www.thesting.com/nl-nl/dames/kleding/jassen
+   - Dames > Kleding > Jeans (6 个子分类)
+     URL: https://www.thesting.com/nl-nl/dames/kleding/jeans
+   - Dames > Kleding > Jumpsuits En Playsuits (1 个子分类)
+     URL: https://www.thesting.com/nl-nl/dames/kleding/jumpsuits-en-playsuits
+   - Dames > Kleding > Jurken (3 个子分类)
+     URL: https://www.thesting.com/nl-nl/dames/kleding/jurken
+   - Dames > Kleding > Rokken (1 个子分类)
+     URL: https://www.thesting.com/nl-nl/dames/kleding/rokken
+   - Dames > Kleding > Shorts (1 个子分类)
+     URL: https://www.thesting.com/nl-nl/dames/kleding/shorts
+   - Dames > Kleding > Swimwear (3 个子分类)
+     URL: https://www.thesting.com/nl-nl/dames/kleding/swimwear
+   - Dames > Kleding > Tops (2 个子分类)
+     URL: https://www.thesting.com/nl-nl/dames/kleding/tops
+   ... 还有 24 个
+
+4. URL验证
+--------------------------------------------------------------------------------
+   有效URL: 130
+   无效URL: 0
+
+5. 重复URL检查
+--------------------------------------------------------------------------------
+   [OK] 无重复URL
+
+================================================================================
+报告生成完成
+================================================================================

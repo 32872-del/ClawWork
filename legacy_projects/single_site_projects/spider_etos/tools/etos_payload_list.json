@@ -1,0 +1,505 @@
+{
+  "Folder acties": {
+    "Acties per categorie": {
+      "Beauty deals": "https://www.etos.nl/aanbiedingen/beauty/",
+      "Verzorging deals": "https://www.etos.nl/aanbiedingen/verzorging/",
+      "Gezondheid deals": "https://www.etos.nl/aanbiedingen/gezondheid/",
+      "Zwanger, Baby & Kind deals": "https://www.etos.nl/aanbiedingen/baby/",
+      "Vouchers": "https://www.etos.nl/vouchers/",
+      "Laatste Kans": "https://www.etos.nl/uitverkoop/",
+      "Alles": "https://www.etos.nl/aanbiedingen/categorieen/"
+    },
+    "Populaire producten": {
+      "Deodorant": "https://www.etos.nl/aanbiedingen/populaire-producten/deodorant/",
+      "Douchegel": "https://www.etos.nl/aanbiedingen/populaire-producten/douchegel/",
+      "Make-up": "https://www.etos.nl/aanbiedingen/populaire-producten/make-up/",
+      "Conditioner": "https://www.etos.nl/aanbiedingen/populaire-producten/conditioner/",
+      "Vitamines": "https://www.etos.nl/aanbiedingen/populaire-producten/vitamines/",
+      "Gezichtsverzorging": "https://www.etos.nl/aanbiedingen/populaire-producten/gezichtsverzorging/",
+      "Alles": "https://www.etos.nl/aanbiedingen/populaire-producten/"
+    },
+    "Type aanbieding": {
+      "1+2 gratis": "https://www.etos.nl/aanbiedingen/type-aanbieding/een-plus-twee-gratis/",
+      "2+3 gratis": "https://www.etos.nl/aanbiedingen/type-aanbieding/twee-plus-drie-gratis-2/",
+      "2e halve prijs": "https://www.etos.nl/aanbiedingen/type-aanbieding/tweede-halve-prijs/",
+      "25% korting": "https://www.etos.nl/aanbiedingen/type-aanbieding/vijfentwintig-procent-korting/",
+      "Altijd laag geprijsd": "https://www.etos.nl/aanbiedingen/type-aanbieding/altijd-laag-geprijsd/",
+      "Alles": "https://www.etos.nl/aanbiedingen/type-aanbieding/"
+    },
+    "Mijn Etos voordelen": {
+      "10% Etos merk korting": "https://www.etos.nl/aanbiedingen/type-aanbieding/tien-procent-etos-merk-korting/",
+      "Sparen": {
+        "Etos Merk favorieten sparen": "https://www.etos.nl/folder-acties/mijn-etos-voordelen/sparen/etos-merk-favorieten-sparen/"
+      },
+      "Alles": "https://www.etos.nl/aanbiedingen/mijn-etos-voordelen/"
+    }
+  },
+  "Merken": {
+    "Populair": {
+      "Etos": "https://www.etos.nl/assortiment/etos/",
+      "NIVEA": "https://www.etos.nl/assortiment/nivea/",
+      "Davitamon": "https://www.etos.nl/assortiment/davitamon/",
+      "CeraVe": "https://www.etos.nl/assortiment/cerave/",
+      "L'Oréal Paris": "https://www.etos.nl/assortiment/loreal-paris/"
+    },
+    "Nieuw": {
+      "Olaplex": "https://www.etos.nl/assortiment/olaplex/",
+      "Björn Axén": "https://www.etos.nl/assortiment/bjorn-axen/",
+      "E.l.f.": "https://www.etos.nl/assortiment/e.l.f./",
+      "JANZEN": "https://www.etos.nl/assortiment/janzen/",
+      "Q+A": "https://www.etos.nl/assortiment/q%2Ba/"
+    },
+    "A-G": {
+      "Always": "https://www.etos.nl/assortiment/always/",
+      "Andrélon": "https://www.etos.nl/assortiment/andrelon/",
+      "Aquafresh": "https://www.etos.nl/assortiment/aquafresh/",
+      "AXE": "https://www.etos.nl/assortiment/axe/",
+      "Biodermal": "https://www.etos.nl/assortiment/biodermal/",
+      "CeraVe": "https://www.etos.nl/assortiment/cerave/",
+      "Dove": "https://www.etos.nl/assortiment/dove/",
+      "Durex": "https://www.etos.nl/assortiment/durex/",
+      "Elmex": "https://www.etos.nl/assortiment/elmex/",
+      "Etos": "https://www.etos.nl/assortiment/etos/",
+      "Eucerin": "https://www.etos.nl/assortiment/eucerin/",
+      "Garnier": "https://www.etos.nl/assortiment/garnier/",
+      "Gillette": "https://www.etos.nl/assortiment/gillette/"
+    },
+    "H-P": {
+      "Kneipp": "https://www.etos.nl/assortiment/kneipp/",
+      "La Roche-Posay": "https://www.etos.nl/assortiment/la-roche-posay/",
+      "Libresse": "https://www.etos.nl/assortiment/libresse/",
+      "L'Oréal Paris": "https://www.etos.nl/assortiment/loreal-paris/",
+      "Lucovitaal": "https://www.etos.nl/assortiment/lucovitaal/",
+      "Maybelline": "https://www.etos.nl/assortiment/maybelline/",
+      "Naïf": "https://www.etos.nl/assortiment/na%C3%AFf/",
+      "NIVEA": "https://www.etos.nl/assortiment/nivea/",
+      "Nutrilon": "https://www.etos.nl/assortiment/nutrilon/",
+      "Olvarit": "https://www.etos.nl/assortiment/olvarit/",
+      "Oral-B": "https://www.etos.nl/assortiment/oral-b/",
+      "Palmolive": "https://www.etos.nl/assortiment/palmolive/",
+      "Pampers": "https://www.etos.nl/assortiment/pampers/"
+    },
+    "Q-Z": {
+      "Rexona": "https://www.etos.nl/assortiment/rexona/",
+      "Rimmel London": "https://www.etos.nl/assortiment/rimmel-london/",
+      "Sanex": "https://www.etos.nl/assortiment/sanex/",
+      "Schwarzkopf": "https://www.etos.nl/assortiment/schwarzkopf/",
+      "Sensodyne": "https://www.etos.nl/assortiment/sensodyne/",
+      "Syoss": "https://www.etos.nl/assortiment/syoss/",
+      "Therme": "https://www.etos.nl/assortiment/therme/",
+      "WELEDA": "https://www.etos.nl/assortiment/weleda/",
+      "Zenner": "https://www.etos.nl/assortiment/zenner/",
+      "Zwitsal": "https://www.etos.nl/assortiment/zwitsal/"
+    }
+  },
+  "Beauty": {
+    "Make-up": {
+      "Oogmake-up": {
+        "Mascara": "https://www.etos.nl/make-up/oog/mascara/",
+        "Oogpotlood": "https://www.etos.nl/make-up/oog/oogpotlood/",
+        "Oogschaduw": "https://www.etos.nl/make-up/oog/oogschaduw/",
+        "Oogschaduw primer": "https://www.etos.nl/make-up/oog/oogschaduwprimer/",
+        "Eyeliner": "https://www.etos.nl/make-up/oog/eyeliner/",
+        "Nepwimpers": "https://www.etos.nl/make-up/oog/nepwimpers/",
+        "Wimper- en wenkbrauwserum": "https://www.etos.nl/make-up/oog/wimper-wenkbrauwserum/"
+      },
+      "Lipmake-up": {
+        "Lippenstift": "https://www.etos.nl/make-up/lip/lippenstift/",
+        "Lipgloss": "https://www.etos.nl/make-up/lip/lipgloss/",
+        "Lipliner": "https://www.etos.nl/make-up/lip/lipliner/",
+        "Lipolie": "https://www.etos.nl/make-up/lip/lipoil/",
+        "Lipverzorging": "https://www.etos.nl/make-up/lip/lipverzorging/"
+      },
+      "Gezichtsmake-up": {
+        "Foundation": "https://www.etos.nl/make-up/gezicht/foundation/",
+        "Concealer": "https://www.etos.nl/make-up/gezicht/concealer/",
+        "Blush": "https://www.etos.nl/make-up/gezicht/blush/",
+        "Bronzer": "https://www.etos.nl/make-up/gezicht/bronzer/",
+        "Setting- en fixing spray": "https://www.etos.nl/make-up/gezicht/fixation-producten/",
+        "Compact powder": "https://www.etos.nl/make-up/gezicht/compact-powder/",
+        "Gezichtsprimer": "https://www.etos.nl/make-up/gezicht/primer/",
+        "BB cream": "https://www.etos.nl/make-up/gezicht/bb-cream/",
+        "Highlighter": "https://www.etos.nl/make-up/gezicht/highlighter/",
+        "Loose powder": "https://www.etos.nl/make-up/gezicht/loose-powder/",
+        "Contour": "https://www.etos.nl/make-up/gezicht/contour/",
+        "CC cream": "https://www.etos.nl/make-up/gezicht/cc-cream/"
+      },
+      "Wenkbrauwmake-up": "https://www.etos.nl/make-up/wenkbrauwen/",
+      "Nagels": {
+        "Nagellak": "https://www.etos.nl/make-up/nagels/nagellak/",
+        "Nagellak-remover": "https://www.etos.nl/make-up/nagels/nagellak-remover/",
+        "Nepnagels": "https://www.etos.nl/make-up/nagels/nepnagels/",
+        "Nagel accessoires": "https://www.etos.nl/make-up/nagels/accessoires/"
+      },
+      "Make-upreiniging": {
+        "Make-up-remover": "https://www.etos.nl/make-up/gezicht/remover/",
+        "Watten & wattenbollen": "https://www.etos.nl/make-up/accessoires/watten/",
+        "Wattenschijfjes": "https://www.etos.nl/make-up/accessoires/wattenschijfjes/",
+        "Wattenstaafjes": "https://www.etos.nl/make-up/accessoires/wattenstaafjes/"
+      },
+      "Make-upaccessoires": {
+        "Sponsjes": "https://www.etos.nl/make-up/accessoires/sponsjes/",
+        "Spiegeltjes": "https://www.etos.nl/make-up/accessoires/spiegeltjes/",
+        "Pincetten": "https://www.etos.nl/make-up/accessoires/pincetten/",
+        "Toilettassen": "https://www.etos.nl/make-up/accessoires/toilettassen/",
+        "Wimperkrullers": "https://www.etos.nl/make-up/accessoires/wimperkrullers/"
+      },
+      "Vegan make-up": "https://www.etos.nl/make-up/vegan/",
+      "Korean make-up": "https://www.etos.nl/make-up/korean/",
+      "Alles": "https://www.etos.nl/make-up/"
+    },
+    "Parfum": {
+      "Damesparfum": {
+        "Eau de Toilette": "https://www.etos.nl/parfum/dames/eau-de-toilette/",
+        "Eau de Parfum": "https://www.etos.nl/parfum/dames/eau-de-parfum/",
+        "Niche geuren": "https://www.etos.nl/parfum/dames/niche-geuren/",
+        "Bodymist": "https://www.etos.nl/parfum/dames/body-mist/",
+        "Dames gift sets": "https://www.etos.nl/parfum/dames/giftsets/",
+        "Eau de Cologne": "https://www.etos.nl/parfum/dames/eau-de-cologne/"
+      },
+      "Herengeuren": {
+        "Eau de Toilette": "https://www.etos.nl/parfum/heren/eau-de-toilette/",
+        "Eau de Parfum": "https://www.etos.nl/parfum/heren/eau-de-parfum/",
+        "Niche geuren": "https://www.etos.nl/parfum/heren/niche-geuren/",
+        "Aftershave": "https://www.etos.nl/parfum/heren/aftershave/",
+        "Eau de Cologne": "https://www.etos.nl/parfum/heren/eau-de-cologne/",
+        "Heren gift sets": "https://www.etos.nl/parfum/heren/giftsets/"
+      },
+      "Niche geuren": "https://www.etos.nl/parfum/niche/",
+      "Alles": "https://www.etos.nl/parfum/"
+    },
+    "Gezichtsverzorging": "https://www.etos.nl/beauty/gezichtsverzorging/",
+    "Haar": "https://www.etos.nl/beauty/haarverzorging/",
+    "Gift sets": "https://www.etos.nl/beauty/giftsets/"
+  },
+  "Verzorging": {
+    "Lichaamsverzorging": {
+      "Zonbescherming": {
+        "Zonnebrand": "https://www.etos.nl/lichaamsverzorging/zonbescherming/zonnebrand/",
+        "Aftersun": "https://www.etos.nl/lichaamsverzorging/zonbescherming/aftersun/",
+        "Zelfbruiner": "https://www.etos.nl/lichaamsverzorging/zonbescherming/zelfbruiner/"
+      },
+      "Deodorant": "https://www.etos.nl/lichaamsverzorging/deodorant/",
+      "Bad & douche": {
+        "Douchegel": "https://www.etos.nl/lichaamsverzorging/bad-douche/douchegel/",
+        "Bodyscrub": "https://www.etos.nl/lichaamsverzorging/bad-douche/bodyscrub/",
+        "Bruisballen": "https://www.etos.nl/lichaamsverzorging/bad-douche/bruisballen/",
+        "Badschuim": "https://www.etos.nl/lichaamsverzorging/bad-douche/badschuim/",
+        "Badolie": "https://www.etos.nl/lichaamsverzorging/bad-douche/badolie/",
+        "Douchecrème": "https://www.etos.nl/lichaamsverzorging/bad-douche/douchecreme/"
+      },
+      "Scheren & ontharing": {
+        "Scheerapparaten": "https://www.etos.nl/lichaamsverzorging/scheren-ontharing/scheerapparaten/",
+        "Scheermesjes": "https://www.etos.nl/lichaamsverzorging/scheren-ontharing/scheermesjes/",
+        "Scheerschuim": "https://www.etos.nl/lichaamsverzorging/scheren-ontharing/scheerschuim/",
+        "Waxstrips": "https://www.etos.nl/lichaamsverzorging/scheren-ontharing/waxstrips/",
+        "Scheergel": "https://www.etos.nl/lichaamsverzorging/scheren-ontharing/scheergel/",
+        "Baardverzorging": "https://www.etos.nl/lichaamsverzorging/scheren-ontharing/baardverzorging/"
+      },
+      "Intieme verzorging": {
+        "Maandverband": "https://www.etos.nl/intieme-hygiene/maandverband/",
+        "Inlegkruisjes": "https://www.etos.nl/intieme-hygiene/inlegkruisjes/",
+        "Tampons": "https://www.etos.nl/intieme-hygiene/tampons/",
+        "Incontinentiemateriaal": "https://www.etos.nl/intieme-hygiene/incontinentiemateriaal/",
+        "Menstruatiecup": "https://www.etos.nl/intieme-hygiene/menstruatiecup/",
+        "Wasemulsie": "https://www.etos.nl/intieme-hygiene/wasemulsie/",
+        "Menstruatieondergoed": "https://www.etos.nl/intieme-hygiene/menstruatieondergoed/"
+      },
+      "Handverzorging": "https://www.etos.nl/huid-hand/handverzorging/",
+      "Huidverzorging": {
+        "Bodycrème": "https://www.etos.nl/huid-hand/huidverzorging/bodycreme/"
+      },
+      "Alles": "https://www.etos.nl/lichaamsverzorging/"
+    },
+    "Gezichtsverzorging": {
+      "Dagcrème": "https://www.etos.nl/gezichtsverzorging/dagcreme/",
+      "Gezichtscrème": "https://www.etos.nl/gezichtsverzorging/gezichtscreme/",
+      "Gezichtsserum": "https://www.etos.nl/gezichtsverzorging/gezichtsserum/",
+      "Gezichtsmaskers": "https://www.etos.nl/gezichtsverzorging/gezichtsmaskers/",
+      "Gezichtsreiniging": "https://www.etos.nl/gezichtsreiniging/",
+      "Exfoliant & peeling": "https://www.etos.nl/gezichtsverzorging/exfoliant-peeling/",
+      "Toner": "https://www.etos.nl/gezichtsverzorging/toner-gezicht/",
+      "Korean skincare": "https://www.etos.nl/gezichtsverzorging/korean-skincare/",
+      "Alles": "https://www.etos.nl/gezichtsverzorging/"
+    },
+    "Heren verzorging": "https://www.etos.nl/verzorging/mannen/",
+    "Mondhygiëne": {
+      "Elektrische tandenborstels": "https://www.etos.nl/mondhygiene/elektrische-tandenborstels/",
+      "Tandpasta": "https://www.etos.nl/mondhygiene/tandpasta/",
+      "Opzetborstels": "https://www.etos.nl/mondhygiene/opzetborstels/",
+      "Mondwater": "https://www.etos.nl/mondhygiene/mondwater/",
+      "Flossen": {
+        "Flosdraad": "https://www.etos.nl/mondhygiene/flossen/flosdraad/"
+      },
+      "Alles": "https://www.etos.nl/mondhygiene/"
+    },
+    "Haarverzorging": {
+      "Shampoo": "https://www.etos.nl/haarverzorging/shampoo/",
+      "Conditioner": "https://www.etos.nl/haarverzorging/conditioner/",
+      "Haarstyling": {
+        "Haarlak": "https://www.etos.nl/haarstyling/haarspray/",
+        "Gel": "https://www.etos.nl/haarstyling/gel/",
+        "Haarwax": "https://www.etos.nl/haarstyling/haarwax/",
+        "Haarcrème": "https://www.etos.nl/haarstyling/haarcreme/",
+        "Haarmousse": "https://www.etos.nl/haarstyling/haarmousse/",
+        "Haarpoeder": "https://www.etos.nl/haarstyling/haarpoeder/",
+        "Gelspray": "https://www.etos.nl/haarstyling/gelspray/",
+        "Heat protection spray": "https://www.etos.nl/haarstyling/heat-protection-spray/"
+      },
+      "Haarverf": {
+        "Permanente haarverf": "https://www.etos.nl/haarstyling/haarverf/permanent/",
+        "Semi-permanent haarverf": "https://www.etos.nl/haarstyling/haarverf/semi-permanent/",
+        "Uitgroei haarkleuring": "https://www.etos.nl/haarstyling/haarverf/uitgroei/"
+      },
+      "Curly Girl Methode": "https://www.etos.nl/haarverzorging/curly-girl-methode/",
+      "Haarmaskers": "https://www.etos.nl/haarverzorging/haarmaskers/",
+      "Accessoires": {
+        "Haarborstels & kammen": "https://www.etos.nl/haarstyling/haarborstels/",
+        "Haarklemmen": "https://www.etos.nl/haarstyling/haarklemmen/",
+        "Haarelastiekjes": "https://www.etos.nl/haarstyling/haarelastiekjes/",
+        "Haarspeldjes & schuifjes": "https://www.etos.nl/haarstyling/haarspeldjes/",
+        "Krulspelden": "https://www.etos.nl/haarstyling/krulspelden/"
+      },
+      "Alles": "https://www.etos.nl/haarverzorging/"
+    },
+    "Dermacare": {
+      "La Roche-Posay": {
+        "Lichaamsverzorging": "https://www.etos.nl/dermacare/la-roche-posay/lichaamsverzorging/"
+      },
+      "CeraVe": "https://www.etos.nl/dermacare/cerave/",
+      "Vichy": "https://www.etos.nl/dermacare/vichy/",
+      "Eucerin": "https://www.etos.nl/dermacare/eucerin/",
+      "Avène": "https://www.etos.nl/dermacare/avene/",
+      "Alles": "https://www.etos.nl/dermacare/"
+    }
+  },
+  "Gezondheid": {
+    "Zelfzorg": {
+      "Zelftesten": "https://www.etos.nl/overige-hulpmiddelen/zelftesten/",
+      "Pijn": {
+        "Menstruatiepijn": "https://www.etos.nl/zelfzorg/pijn/menstruatiepijn/",
+        "Gewrichtspijn": "https://www.etos.nl/zelfzorg/pijn/gewrichtspijn/",
+        "Spierpijn": "https://www.etos.nl/zelfzorg/pijn/spierpijn/"
+      },
+      "Pijnstillers": {
+        "Paracetamol": "https://www.etos.nl/zelfzorg/pijn/paracetamol/",
+        "Ibuprofen": "https://www.etos.nl/zelfzorg/pijn/ibuprofen/"
+      },
+      "Griep": "https://www.etos.nl/zelfzorg/griep/",
+      "Koorts": "https://www.etos.nl/zelfzorg/koorts/",
+      "Allergie": "https://www.etos.nl/zelfzorg/allergie/",
+      "Luchtwegen": {
+        "Neus": "https://www.etos.nl/zelfzorg/luchtwegen/neus/",
+        "Hoest": "https://www.etos.nl/zelfzorg/luchtwegen/hoest/",
+        "Keel": "https://www.etos.nl/zelfzorg/luchtwegen/keel/"
+      },
+      "Maag": "https://www.etos.nl/zelfzorg/maag/",
+      "Darm": "https://www.etos.nl/zelfzorg/darm/",
+      "Spieren & gewrichten": {
+        "Spieren": "https://www.etos.nl/zelfzorg/spieren-en-gewrichten/spieren/",
+        "Gewrichten": "https://www.etos.nl/zelfzorg/spieren-en-gewrichten/gewrichten/"
+      },
+      "Vrouw": {
+        "Zwangerschap": "https://www.etos.nl/zelfzorg/vrouw/zwangerschap/",
+        "Morning-afterpil": "https://www.etos.nl/zelfzorg/vrouw/morning-afterpil/"
+      },
+      "Zelfzorg kind": {
+        "Pijn": "https://www.etos.nl/zelfzorg/kind/pijn/",
+        "Griep": "https://www.etos.nl/zelfzorg/kind/griep/",
+        "Verkoudheid": "https://www.etos.nl/zelfzorg/kind/verkoudheid/"
+      },
+      "Melatonine geneesmiddelen": "https://www.etos.nl/zelfzorg/ontspanning-en-nachtrust/melatonine/",
+      "Alles": "https://www.etos.nl/zelfzorg/"
+    },
+    "Vitamines & supplementen": {
+      "Vitamines": {
+        "Multivitamines": "https://www.etos.nl/vitamines-mineralen-en-supplementen/vitamines/multivitamines/",
+        "Kindervitamines": "https://www.etos.nl/vitamines-mineralen-en-supplementen/vitamines/kindervitamines/",
+        "Vitamine D": "https://www.etos.nl/vitamines-mineralen-en-supplementen/vitamines/vitamine-d/",
+        "Vitamine C": "https://www.etos.nl/vitamines-mineralen-en-supplementen/vitamines/vitamine-c/",
+        "Zwangerschapsvitamines": "https://www.etos.nl/vitamines-mineralen-en-supplementen/vitamines/zwangerschapsvitamines/",
+        "Foliumzuur": "https://www.etos.nl/vitamines-mineralen-en-supplementen/vitamines/foliumzuur/",
+        "Vitamine E": "https://www.etos.nl/vitamines-mineralen-en-supplementen/vitamines/vitamine-e/",
+        "Vitamine K": "https://www.etos.nl/vitamines-mineralen-en-supplementen/vitamines/vitamine-k/"
+      },
+      "Voedingssupplementen": {
+        "Rust & ontspanning": "https://www.etos.nl/vitamines-mineralen-en-supplementen/supplementen/rust-en-ontspanning/",
+        "Weerstand & energie": "https://www.etos.nl/vitamines-mineralen-en-supplementen/supplementen/weerstand-energie/",
+        "Immuunsysteem": "https://www.etos.nl/vitamines-mineralen-en-supplementen/supplementen/immuunsysteem/",
+        "Huid, haar & nagels": "https://www.etos.nl/vitamines-mineralen-en-supplementen/supplementen/huid-haar-nagels/",
+        "Spieren & gewrichten": "https://www.etos.nl/vitamines-mineralen-en-supplementen/supplementen/spieren-botten-gewrichten/",
+        "Zwangerschap": "https://www.etos.nl/vitamines-mineralen-en-supplementen/supplementen/zwangerschap/",
+        "Omega 3 Visolie": "https://www.etos.nl/vitamines-mineralen-en-supplementen/supplementen/visolie-omega-3/",
+        "Melatonine": "https://www.etos.nl/vitamines-mineralen-en-supplementen/supplementen/melatonine/",
+        "Overgang": "https://www.etos.nl/zelfzorg/vrouw/overgang/",
+        "Hart & bloedvaten": "https://www.etos.nl/vitamines-mineralen-en-supplementen/supplementen/hart-bloedvaten/",
+        "Kruiden- en planten": "https://www.etos.nl/vitamines-mineralen-en-supplementen/supplementen/kruiden-planten/",
+        "CBD": "https://www.etos.nl/vitamines-mineralen-en-supplementen/supplementen/cbd/",
+        "Glucosamine": "https://www.etos.nl/vitamines-mineralen-en-supplementen/supplementen/glucosamine/",
+        "Cranberry": "https://www.etos.nl/vitamines-mineralen-en-supplementen/supplementen/cranberry/",
+        "Kurkuma": "https://www.etos.nl/vitamines-mineralen-en-supplementen/supplementen/kurkuma/",
+        "Q10 supplementen": "https://www.etos.nl/vitamines-mineralen-en-supplementen/supplementen/q10/",
+        "Blaas & prostaat": "https://www.etos.nl/vitamines-mineralen-en-supplementen/supplementen/blaas-prostaat/",
+        "Overige supplementen": "https://www.etos.nl/vitamines-mineralen-en-supplementen/supplementen/overig/"
+      },
+      "Mineralen": {
+        "Magnesium": "https://www.etos.nl/vitamines-mineralen-en-supplementen/mineralen/magnesium/",
+        "Calcium": "https://www.etos.nl/vitamines-mineralen-en-supplementen/mineralen/calcium/",
+        "Zink": "https://www.etos.nl/vitamines-mineralen-en-supplementen/mineralen/zink/",
+        "IJzer": "https://www.etos.nl/vitamines-mineralen-en-supplementen/mineralen/ijzer/",
+        "Kalium": "https://www.etos.nl/vitamines-mineralen-en-supplementen/mineralen/kalium/",
+        "Jodiumtabletten": "https://www.etos.nl/vitamines-mineralen-en-supplementen/mineralen/jodium/"
+      },
+      "Alles": "https://www.etos.nl/vitamines-mineralen-en-supplementen/"
+    },
+    "Optiek": {
+      "Lenzen": "https://www.etos.nl/optiek/lenzen/",
+      "Lenzenvloeistof": "https://www.etos.nl/optiek/lenzenvloeistof/",
+      "Alles": "https://www.etos.nl/optiek/"
+    },
+    "Wondverzorging": "https://www.etos.nl/wondverzorging/",
+    "Sport": "https://www.etos.nl/sport/",
+    "Voeding": "https://www.etos.nl/voeding/",
+    "Voetongemakken": {
+      "Kalknagels": "https://www.etos.nl/voetongemakken/kalknagels/",
+      "Voetschimmel": "https://www.etos.nl/voetongemakken/voetschimmel/",
+      "Voetwratten": "https://www.etos.nl/voetongemakken/voetwratten/",
+      "Alles": "https://www.etos.nl/voetongemakken/"
+    },
+    "Speciale huidverzorging": {
+      "Antischimmel": "https://www.etos.nl/speciale-huidverzorging/antischimmel/",
+      "Wratten": "https://www.etos.nl/speciale-huidverzorging/wratten/",
+      "Eczeem": "https://www.etos.nl/speciale-huidverzorging/eczeem/",
+      "Alles": "https://www.etos.nl/speciale-huidverzorging/"
+    },
+    "Seksualiteit": {
+      "Condooms": "https://www.etos.nl/seksualiteit/condooms/",
+      "Glijmiddel": "https://www.etos.nl/seksualiteit/glijmiddel/",
+      "Seksspeeltjes": "https://www.etos.nl/seksualiteit/seksspeeltjes/",
+      "Morning-afterpil": "https://www.etos.nl/seksualiteit/morning-afterpil/",
+      "Alles": "https://www.etos.nl/seksualiteit/"
+    }
+  },
+  "Zwanger, Baby & Kind": {
+    "Verschonen": {
+      "Luiers": "https://www.etos.nl/verschonen/luiers/",
+      "Luierbroekjes": "https://www.etos.nl/verschonen/luierbroekjes/",
+      "Billendoekjes": "https://www.etos.nl/verschonen/babydoekjes/",
+      "Alles": "https://www.etos.nl/verschonen/"
+    },
+    "Babyverzorging": {
+      "Baby huidverzorging": "https://www.etos.nl/babyverzorging/huid/",
+      "Baby bad- en doucheverzorging": "https://www.etos.nl/babyverzorging/bad-douche/",
+      "Baby haarverzorging": "https://www.etos.nl/babyverzorging/haar/",
+      "Zonnebrand Baby & Kind": "https://www.etos.nl/babyverzorging/zonnebrand/",
+      "Baby- en kind mondverzorging": "https://www.etos.nl/babyverzorging/mondverzorging/",
+      "Alles": "https://www.etos.nl/babyverzorging/"
+    },
+    "Eten & drinken": {
+      "Flesvoeding": {
+        "Zuigelingenvoeding": "https://www.etos.nl/babyvoeding/zuigelingenvoeding/",
+        "Opvolgmelk": "https://www.etos.nl/babyvoeding/opvolgmelk/",
+        "Flessen": "https://www.etos.nl/babyaccessoires/flessen/",
+        "Spenen": "https://www.etos.nl/babyaccessoires/spenen/",
+        "Flesvoedingaccessoires": "https://www.etos.nl/baby/flesvoeding/accessoires/"
+      },
+      "Babyvoeding": {
+        "Groentehapjes": "https://www.etos.nl/babyvoeding/groentehapjes/",
+        "Babypap": "https://www.etos.nl/babyvoeding/babypap/",
+        "Fruithapjes": "https://www.etos.nl/babyvoeding/fruithapjes/",
+        "Baby snacks": "https://www.etos.nl/babyvoeding/snacks/"
+      },
+      "Flessen": "https://www.etos.nl/zwanger-baby-kind/eten-drinken/flessen/",
+      "Babybekers": "https://www.etos.nl/eten-en-drinken/bekers/",
+      "Bakjes & lepels": "https://www.etos.nl/eten-en-drinken/bakjes-lepels/",
+      "Alles": "https://www.etos.nl/baby/eten-en-drinken/"
+    },
+    "Baby & kind accessoires": {
+      "Fopspenen": "https://www.etos.nl/babyaccessoires/fopspenen/",
+      "Drinkbekers": "https://www.etos.nl/babyaccessoires/bekers/",
+      "Bakjes & lepels": "https://www.etos.nl/baby/eten-en-drinken/bakjes-en-lepels/",
+      "Bijtringen": "https://www.etos.nl/baby/eten-en-drinken/bijtringen/",
+      "Alles": "https://www.etos.nl/babyaccessoires/"
+    },
+    "Baby & kind gezondheid": "https://www.etos.nl/baby-gezondheid/",
+    "Zwanger": {
+      "Huidverzorging": "https://www.etos.nl/zwanger/huidverzorging/",
+      "Supplementen": "https://www.etos.nl/zwanger/multivitamine/",
+      "Zwangerschapstest": "https://www.etos.nl/zwanger/zwangerschapstest/",
+      "Ovulatietest": "https://www.etos.nl/zwanger/ovulatietest/",
+      "Alles": "https://www.etos.nl/zwanger/"
+    },
+    "Kraamtijd": "https://www.etos.nl/zwanger/kraamtijd/",
+    "Speelgoed": "https://www.etos.nl/baby-cadeaus/speelgoed/",
+    "Babykleding": "https://www.etos.nl/baby/kleding/",
+    "Baby- en kraamcadeaus": "https://www.etos.nl/baby-cadeaus/"
+  },
+  "Thuis & Op Reis": {
+    "Huishouden": {
+      "Schoonmaakartikelen": "https://www.etos.nl/huishouden/schoonmaakartikelen/",
+      "Wasmiddel": "https://www.etos.nl/huishouden/wasmiddel/",
+      "Ongediertebestrijding": "https://www.etos.nl/huishouden/ongediertebestrijding/",
+      "Batterijen": "https://www.etos.nl/huishouden/batterijen/",
+      "Tissues": "https://www.etos.nl/huishouden/tissues/",
+      "Wc-papier": "https://www.etos.nl/huishouden/wc-papier/",
+      "Zakdoekjes": "https://www.etos.nl/huishouden/zakdoekjes/",
+      "Alles": "https://www.etos.nl/huishouden/"
+    },
+    "Thuis & lifestyle": {
+      "Geurstokjes": "https://www.etos.nl/thuis-en-lifestyle/geurstokjes/",
+      "Slaapmaskers": "https://www.etos.nl/thuis-en-lifestyle/slaapmaskers/",
+      "Geurkaarsen": "https://www.etos.nl/thuis-en-lifestyle/geurkaarsen/",
+      "Essentiële olie": "https://www.etos.nl/thuis-en-lifestyle/essentiele-olie/",
+      "Aroma diffusers": "https://www.etos.nl/thuis-en-lifestyle/aroma-diffusers/",
+      "Bruisballen": "https://www.etos.nl/thuis-en-lifestyle/bruisballen/",
+      "Alles": "https://www.etos.nl/thuis-en-lifestyle/"
+    },
+    "Op reis": {
+      "Wintersport": "https://www.etos.nl/op-reis/wintersport/",
+      "Zomervakantie": "https://www.etos.nl/zomervakantie/",
+      "Dagje weg": "https://www.etos.nl/dagjeweg/",
+      "Zonbescherming & aftersun": {
+        "Zonnebrand": "https://www.etos.nl/op-reis/zonbescherming/zonnebrand/",
+        "Aftersun": "https://www.etos.nl/op-reis/zonbescherming/aftersun/",
+        "Zelfbruiner": "https://www.etos.nl/op-reis/zonbescherming/zelfbruiner/"
+      },
+      "Mini-reisverpakkingen": "https://www.etos.nl/op-reis/mini-reisverpakkingen/",
+      "Anti-insect": "https://www.etos.nl/op-reis/anti-insect/",
+      "Reisziekte": "https://www.etos.nl/op-reis/reisziekte/",
+      "Toilettassen": "https://www.etos.nl/op-reis/toilettassen/",
+      "Festival": "https://www.etos.nl/festival/",
+      "Reisflesjes": "https://www.etos.nl/op-reis/reisflesjes/",
+      "Alles": "https://www.etos.nl/op-reis/"
+    },
+    "Kleding": {
+      "Boob tape": "https://www.etos.nl/kleding/boob-tape/",
+      "Boxers": "https://www.etos.nl/kleding/boxers/",
+      "Sokken": "https://www.etos.nl/kleding/sokken/",
+      "Alles": "https://www.etos.nl/kleding/"
+    },
+    "Voeding": {
+      "Kruidenthee": "https://www.etos.nl/eten-en-drinken/kruidenthee/",
+      "Healthy foods": "https://www.etos.nl/eten-en-drinken/healthy-foods/",
+      "Eiwitpoeder": "https://www.etos.nl/thuis-en-op-reis/voeding/eiwitpoeder/",
+      "Eiwitrepen": "https://www.etos.nl/thuis-en-op-reis/voeding/eiwitrepen/",
+      "Alles": "https://www.etos.nl/thuis-en-op-reis/voeding/"
+    },
+    "Bo Wilkes x Etos": "https://www.etos.nl/thuis-op-reis/bo-wilkes-x-etos/"
+  },
+  "Cadeaus": {
+    "Cadeaus voor haar": "https://www.etos.nl/cadeau/voor-haar/",
+    "Cadeaus voor hem": "https://www.etos.nl/cadeau/voor-hem/",
+    "Cadeaus voor kind & baby": "https://www.etos.nl/cadeau/voor-baby-en-kind/",
+    "Cadeaukaarten": "https://www.etos.nl/cadeau/cadeaukaarten/",
+    "Cadeaus tot ": "https://www.etos.nl/cadeaus/cadeaus-tot-%E2%82%AC-15/",
+    "Gift sets": {
+      "Gift sets voor haar": "https://www.etos.nl/cadeau/gift-sets/vrouwen/",
+      "Voor hem": "https://www.etos.nl/cadeau/gift-sets/mannen/",
+      "Alles": "https://www.etos.nl/cadeau/gift-sets/"
+    },
+    "Parfum cadeaus": "https://www.etos.nl/cadeau/parfum/",
+    "Spannende cadeaus": "https://www.etos.nl/cadeau/spannende-cadeaus/",
+    "Altijd goed": "https://www.etos.nl/cadeau/altijd-goed/"
+  },
+  "Trending": "https://www.etos.nl/trending/"
+}

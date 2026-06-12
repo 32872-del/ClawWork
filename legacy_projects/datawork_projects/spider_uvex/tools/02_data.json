@@ -1,0 +1,42 @@
+{
+    "Kaski Rowerowe": {
+        "Allround": "https://uvex.com.pl/produkty/kaski-rowerowe/kaski-rowerowe-allround/",
+        "City": "https://uvex.com.pl/produkty/kaski-rowerowe/kaski-rowerowe-city/",
+        "Junior": "https://uvex.com.pl/produkty/kaski-rowerowe/kaski-rowerowe-junior/",
+        "Mountainbike": "https://uvex.com.pl/produkty/kaski-rowerowe/kaski-rowerowe-mountainbike/",
+        "Performance": "https://uvex.com.pl/produkty/kaski-rowerowe/kaski-rowerowe-performance/"
+    },
+    "Okulary": {
+        "Allround": "https://uvex.com.pl/produkty/okulary/okulary-allround/",
+        "Colorvision": "https://uvex.com.pl/produkty/okulary/okulary-colorvision/",
+        "Fashion": "https://uvex.com.pl/produkty/okulary/okulary-fashion/",
+        "Junior": "https://uvex.com.pl/produkty/okulary/okulary-junior/",
+        "Polavision": "https://uvex.com.pl/produkty/okulary/okulary-polavision/",
+        "Variomatic": "https://uvex.com.pl/produkty/okulary/okulary-variomatic/",
+        "Z Wymiennymi Szybami": "https://uvex.com.pl/produkty/okulary/okulary-z-wymiennymi-szybami/"
+    },
+    "Kaski Narciarskie": {
+        "Allround": "https://uvex.com.pl/produkty/kaski-narciarskie/kaski-narciarskie-allround/",
+        "Junior": "https://uvex.com.pl/produkty/kaski-narciarskie/kaski-narciarskie-junior/",
+        "Performance": "https://uvex.com.pl/produkty/kaski-narciarskie/kaski-narciarskie-performance/",
+        "Visor": "https://uvex.com.pl/produkty/kaski-narciarskie/kaski-narciarskie-visor/"
+    },
+    "Gogle": {
+        "Allround": "https://uvex.com.pl/produkty/gogle/gogle-allround/",
+        "Attract": "https://uvex.com.pl/produkty/gogle/gogle-attract/",
+        "Colorvision": "https://uvex.com.pl/produkty/gogle/gogle-colorvision/",
+        "Junior": "https://uvex.com.pl/produkty/gogle/gogle-junior/",
+        "Race": "https://uvex.com.pl/produkty/gogle/gogle-race/",
+        "Take Off": "https://uvex.com.pl/produkty/gogle/gogle-take-off/",
+        "Variomatic": "https://uvex.com.pl/produkty/gogle/gogle-variomatic/"
+    },
+    "Akcesoria": {
+        "Do Gogli": "https://uvex.com.pl/produkty/akcesoria/akcesoria-do-gogli/",
+        "Do Kasków Narciarskich": "https://uvex.com.pl/produkty/akcesoria/akcesoria-do-kaskow-narciarskich/",
+        "Do Kasków Rowerowych": "https://uvex.com.pl/produkty/akcesoria/akcesoria-do-kaskow-rowerowych/",
+        "Do Okularów": "https://uvex.com.pl/produkty/akcesoria/akcesoria-do-okularow/",
+        "Pozostałe": "https://uvex.com.pl/produkty/akcesoria/pozostale/"
+    },
+    "Outlet": "https://uvex.com.pl/produkty/outlet/",
+    "Uvex Kid 4": "https://uvex.com.pl/produkty/uvex-kid-4/"
+}
