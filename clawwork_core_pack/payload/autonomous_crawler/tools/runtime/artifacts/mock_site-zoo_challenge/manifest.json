@@ -1,0 +1,46 @@
+{
+  "target_url": "mock://site-zoo/challenge",
+  "stage": "recon",
+  "created_at": "2026-05-30T07:05:14.315080+00:00",
+  "final_url": "mock://site-zoo/challenge",
+  "fetch_mode": "mock",
+  "browser_context": {
+    "headless": true,
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",
+    "viewport": {
+      "width": 1365,
+      "height": 768
+    },
+    "locale": "en-US",
+    "timezone_id": "UTC",
+    "extra_http_headers": {},
+    "storage_state_path": "",
+    "proxy_url": "",
+    "java_script_enabled": true,
+    "ignore_https_errors": false,
+    "color_scheme": "light"
+  },
+  "screenshot_path": "",
+  "html_path": "F:\\datawork\\agent\\autonomous_crawler\\tools\\runtime\\artifacts\\mock_site-zoo_challenge\\snapshot.html",
+  "network_trace_path": "",
+  "access_decision": {
+    "action": "manual_handoff",
+    "risk_level": "high",
+    "allowed": false,
+    "reasons": [
+      "managed_challenge:cf-challenge"
+    ],
+    "safeguards": [
+      "respect configured rate limits",
+      "record access decision",
+      "do not solve CAPTCHA by default",
+      "use only user-provided authorized sessions"
+    ],
+    "requires_authorized_session": true,
+    "requires_manual_review": true
+  },
+  "notes": [
+    "attempts=1"
+  ],
+  "manifest_path": "F:\\datawork\\agent\\autonomous_crawler\\tools\\runtime\\artifacts\\mock_site-zoo_challenge\\manifest.json"
+}

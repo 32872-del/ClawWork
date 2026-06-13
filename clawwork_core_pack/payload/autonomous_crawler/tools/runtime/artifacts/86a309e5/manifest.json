@@ -1,0 +1,44 @@
+{
+  "target_url": "mock://catalog",
+  "stage": "recon",
+  "created_at": "2026-05-16T08:54:35.000113+00:00",
+  "final_url": "mock://catalog",
+  "fetch_mode": "mock",
+  "browser_context": {
+    "headless": true,
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",
+    "viewport": {
+      "width": 1365,
+      "height": 768
+    },
+    "locale": "en-US",
+    "timezone_id": "UTC",
+    "extra_http_headers": {},
+    "storage_state_path": "",
+    "proxy_url": "",
+    "java_script_enabled": true,
+    "ignore_https_errors": false,
+    "color_scheme": "light"
+  },
+  "screenshot_path": "",
+  "html_path": "F:\\datawork\\agent\\autonomous_crawler\\tools\\runtime\\artifacts\\86a309e5\\snapshot.html",
+  "network_trace_path": "",
+  "access_decision": {
+    "action": "standard_http",
+    "risk_level": "low",
+    "allowed": true,
+    "reasons": [
+      "no_access_block_detected"
+    ],
+    "safeguards": [
+      "respect configured rate limits",
+      "record access decision"
+    ],
+    "requires_authorized_session": false,
+    "requires_manual_review": false
+  },
+  "notes": [
+    "attempts=1"
+  ],
+  "manifest_path": "F:\\datawork\\agent\\autonomous_crawler\\tools\\runtime\\artifacts\\86a309e5\\manifest.json"
+}
