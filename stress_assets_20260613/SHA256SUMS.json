@@ -1,0 +1,17 @@
+﻿[
+    {
+        "path":  "2026-05-09_local_stress_test_report.md",
+        "bytes":  1019,
+        "sha256":  "9301d242a7674c4f4dc28e579f1dee3152a4229ce1305ed439f51f8b3327b63b"
+    },
+    {
+        "path":  "2026-05-09_local_stress_test_summary.json",
+        "bytes":  2530,
+        "sha256":  "26ef9568c3e5cbaaf3138ab78511e261525a5e2eea0387dd957d0266e074a59e"
+    },
+    {
+        "path":  "2026-05-09_stress_export_30000.xlsx",
+        "bytes":  2161256,
+        "sha256":  "780b3032d75c37f026e883c71f7319dcf8f551665fa029557b4baae2a37c32ac"
+    }
+]
